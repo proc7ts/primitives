@@ -52,8 +52,7 @@
     "clean": "node ./build/clean",
     "doc": "typedoc",
     "doc:gh-pages": "gh-pages --dist target/typedoc --dotfiles",
-    "doc:ci": "node ./build/doc-ci",
-    "doc:publish": "run-s doc doc:ci \"doc:gh-pages {@}\" --",
+    "doc:publish": "run-s doc \"doc:gh-pages {@}\" --",
     "lint": "eslint . --ext .js,.ts",
     "rebuild": "run-s clean build",
     "test": "jest"
