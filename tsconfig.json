@@ -11,6 +11,7 @@
     "noUnusedParameters": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
+    "importsNotUsedAsValues": "error",
     "noEmitHelpers": true,
     "lib": [
       "es2018"
