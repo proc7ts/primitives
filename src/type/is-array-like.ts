@@ -5,10 +5,10 @@
 /**
  * Checks whether the given value is array-like.
  *
- * @param target  A value to check.
+ * @param value  A value to check.
  *
  * @returns `true` if the `value` has a `length` property, or `false` otherwise.
  */
-export function isArrayLike<T>(target: any): target is ArrayLike<T> {
-  return !!target && typeof target === 'object' && typeof target.length === 'number';
+export function isArrayLike<T>(value: any): value is ArrayLike<T> {
+  return !!value && typeof value === 'object' && typeof value.length === 'number';
 }
