@@ -3,6 +3,8 @@
  * @module @proc7ts/primitives
  */
 
+import { asyncValue } from './async-value';
+
 /**
  * Asynchronous recipe of value evaluation.
  *
@@ -75,5 +77,5 @@ export function asyncRecipe<T, P extends any[]>(
 ): (this: void, ...args: P) => Promise<T> {
   return (/*#__INLINE__*/ isAsyncEvaluator(recipe))
       ? (async (...args) => recipe(...args))
-      : async () => recipe;
+      : () => asyncValue(recipe);
 }
