@@ -26,7 +26,6 @@ describe('valueByRecipe', () => {
 });
 
 describe('valueRecipe', () => {
-
   it('retains the recipe as-is', () => {
 
     const recipe: ValueRecipe<string> = valueProvider('test');

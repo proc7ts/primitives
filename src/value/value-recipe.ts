@@ -51,7 +51,7 @@ function isValueEvaluator<T, P extends any[]>(
  * @param recipe  Value evaluation recipe.
  * @param args  Parameters required for value evaluation.
  *
- * @returns Either value itself, or the one evaluated by the given evaluator recipe.
+ * @returns Either the value itself, or the one evaluated by the given evaluator recipe.
  */
 export function valueByRecipe<T, P extends any[]>(
     recipe: ValueRecipe<T, P>,
