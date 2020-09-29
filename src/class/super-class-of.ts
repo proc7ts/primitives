@@ -21,7 +21,7 @@ import type { Class } from './class';
 export function superClassOf(type: Class, satisfying: (type: Class) => boolean = () => true): Class | undefined {
 
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-  const prototype = Object.getPrototypeOf(type.prototype);
+  const prototype: object = Object.getPrototypeOf(type.prototype);
 
   if (prototype == null) {
     return;
