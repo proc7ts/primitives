@@ -76,6 +76,7 @@
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/Class.html" class="tsd-kind-icon">Class</a></li>
+								<li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/PromiseResolver.html" class="tsd-kind-icon">Promise<wbr>Resolver</a></li>
 								<li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/PropertyAccessorDescriptor.html" class="tsd-kind-icon">Property<wbr>Accessor<wbr>Descriptor</a></li>
 							</ul>
 						</section>
@@ -97,10 +98,12 @@
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#isIterable" class="tsd-kind-icon">is<wbr>Iterable</a></li>
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#isNotPresent" class="tsd-kind-icon">is<wbr>Not<wbr>Present</a></li>
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#isPresent" class="tsd-kind-icon">is<wbr>Present</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#isPromiseLike" class="tsd-kind-icon">is<wbr>Promise<wbr>Like</a></li>
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#isPropertyAccessorDescriptor" class="tsd-kind-icon">is<wbr>Property<wbr>Accessor<wbr>Descriptor</a></li>
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#isUndefined" class="tsd-kind-icon">is<wbr>Undefined</a></li>
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#lazyValue" class="tsd-kind-icon">lazy<wbr>Value</a></li>
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#mergeFunctions" class="tsd-kind-icon">merge<wbr>Functions</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#newPromiseResolver" class="tsd-kind-icon">new<wbr>Promise<wbr>Resolver</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#noop" class="tsd-kind-icon">noop</a></li>
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#setOfElements" class="tsd-kind-icon">set<wbr>OfElements</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#superClassOf" class="tsd-kind-icon">super<wbr>Class<wbr>Of</a></li>
@@ -122,13 +125,13 @@
 					<h3>array<wbr>OfElements</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
 						<li class="tsd-signature tsd-kind-icon">array<wbr>OfElements&lt;T&gt;<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
-						<li class="tsd-signature tsd-kind-icon">array<wbr>OfElements&lt;T&gt;<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">array<wbr>OfElements&lt;T&gt;<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/array/array-of-elements.ts#L36">proc7ts/primitives/src/array/array-of-elements.ts:36</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/array/array-of-elements.ts#L36">proc7ts/primitives/src/array/array-of-elements.ts:36</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -158,7 +161,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/array/array-of-elements.ts#L46">proc7ts/primitives/src/array/array-of-elements.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/array/array-of-elements.ts#L46">proc7ts/primitives/src/array/array-of-elements.ts:46</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -175,13 +178,13 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>value: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+									<h5>value: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Either element, readonly array of elements, <code>null</code>, or <code>undefined</code>.</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
 							<p>The <code>value</code> itself if it is an array, empty array if the <code>value</code> is <code>null</code> or <code>undefined</code>, or an array
 							containing only <code>value</code> otherwise.</p>
 						</li>
@@ -197,7 +200,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/fn/asis.ts#L12">proc7ts/primitives/src/fn/asis.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/fn/asis.ts#L12">proc7ts/primitives/src/fn/asis.ts:12</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -229,13 +232,13 @@
 					<a name="asyncByRecipe" class="tsd-anchor"></a>
 					<h3>async<wbr>ByRecipe</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">async<wbr>ByRecipe&lt;T, P&gt;<span class="tsd-signature-symbol">(</span>recipe<span class="tsd-signature-symbol">: </span><a href="modules/AsyncRecipe.html" class="tsd-signature-type">AsyncRecipe</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">P</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">P</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">async<wbr>ByRecipe&lt;TValue, TArgs&gt;<span class="tsd-signature-symbol">(</span>recipe<span class="tsd-signature-symbol">: </span><a href="modules/AsyncRecipe.html" class="tsd-signature-type">AsyncRecipe</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TArgs</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TArgs</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/value/async-recipe.ts#L59">proc7ts/primitives/src/value/async-recipe.ts:59</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/value/async-recipe.ts#L58">proc7ts/primitives/src/value/async-recipe.ts:58</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -246,13 +249,13 @@
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>T</h4>
+									<h4>TValue</h4>
 									<div class="tsd-comment tsd-typography">
 										<p>Evaluated value type. This can not be a function.</p>
 									</div>
 								</li>
 								<li>
-									<h4>P<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
+									<h4>TArgs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
 									<div class="tsd-comment tsd-typography">
 										<p>A type of parameters tuple required for value evaluation.</p>
 									</div>
@@ -261,19 +264,19 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>recipe: <a href="modules/AsyncRecipe.html" class="tsd-signature-type">AsyncRecipe</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">P</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>recipe: <a href="modules/AsyncRecipe.html" class="tsd-signature-type">AsyncRecipe</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TArgs</span><span class="tsd-signature-symbol">&gt;</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Asynchronous value evaluation recipe.</p>
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">P</span></h5>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">TArgs</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Parameters required for value evaluation.</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">&gt;</span></h4>
 							<p>A promise resolved to the value.</p>
 						</li>
 					</ul>
@@ -282,13 +285,13 @@
 					<a name="asyncRecipe" class="tsd-anchor"></a>
 					<h3>async<wbr>Recipe</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">async<wbr>Recipe&lt;T, P&gt;<span class="tsd-signature-symbol">(</span>recipe<span class="tsd-signature-symbol">: </span><a href="modules/AsyncRecipe.html" class="tsd-signature-type">AsyncRecipe</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">P</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>this<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">P</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">async<wbr>Recipe&lt;TValue, TArgs&gt;<span class="tsd-signature-symbol">(</span>recipe<span class="tsd-signature-symbol">: </span><a href="modules/AsyncRecipe.html" class="tsd-signature-type">AsyncRecipe</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TArgs</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>this<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TArgs</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/value/async-recipe.ts#L75">proc7ts/primitives/src/value/async-recipe.ts:75</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/value/async-recipe.ts#L74">proc7ts/primitives/src/value/async-recipe.ts:74</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -299,13 +302,13 @@
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>T</h4>
+									<h4>TValue</h4>
 									<div class="tsd-comment tsd-typography">
 										<p>Evaluated value type. This can not be a function.</p>
 									</div>
 								</li>
 								<li>
-									<h4>P<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
+									<h4>TArgs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
 									<div class="tsd-comment tsd-typography">
 										<p>A type of parameters tuple required for value evaluation.</p>
 									</div>
@@ -314,18 +317,18 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>recipe: <a href="modules/AsyncRecipe.html" class="tsd-signature-type">AsyncRecipe</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">P</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>recipe: <a href="modules/AsyncRecipe.html" class="tsd-signature-type">AsyncRecipe</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TArgs</span><span class="tsd-signature-symbol">&gt;</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Asynchronous value recipe to convert.</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">(</span>this<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">P</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">(</span>this<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TArgs</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">&gt;</span></h4>
 							<p>A function asynchronously evaluating the value.</p>
 							<ul class="tsd-parameters">
 								<li class="tsd-parameter-signature">
 									<ul class="tsd-signatures tsd-kind-type-literal">
-										<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>this<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">P</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+										<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>this<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TArgs</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">&gt;</span></li>
 									</ul>
 									<ul class="tsd-descriptions">
 										<li class="tsd-description">
@@ -335,10 +338,10 @@
 													<h5>this: <span class="tsd-signature-type">void</span></h5>
 												</li>
 												<li>
-													<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">P</span></h5>
+													<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">TArgs</span></h5>
 												</li>
 											</ul>
-											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">&gt;</span></h4>
 										</li>
 									</ul>
 								</li>
@@ -356,7 +359,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/value/async-value.ts#L13">proc7ts/primitives/src/value/async-value.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/value/async-value.ts#L13">proc7ts/primitives/src/value/async-value.ts:13</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -394,7 +397,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/array/element-or-array.ts#L14">proc7ts/primitives/src/array/element-or-array.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/array/element-or-array.ts#L14">proc7ts/primitives/src/array/element-or-array.ts:14</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -427,13 +430,13 @@
 					<a name="extendSetOfElements" class="tsd-anchor"></a>
 					<h3>extend<wbr>Set<wbr>OfElements</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">extend<wbr>Set<wbr>OfElements&lt;T&gt;<span class="tsd-signature-symbol">(</span>set<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, elements<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">extend<wbr>Set<wbr>OfElements&lt;T&gt;<span class="tsd-signature-symbol">(</span>set<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, elements<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/array/set-of-elements.ts#L31">proc7ts/primitives/src/array/set-of-elements.ts:31</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/array/set-of-elements.ts#L31">proc7ts/primitives/src/array/set-of-elements.ts:31</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -458,7 +461,7 @@
 									</div>
 								</li>
 								<li>
-									<h5>elements: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+									<h5>elements: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Element(s) to add to the <code>set</code>. Either element, readonly array of elements, <code>null</code>, or <code>undefined</code>.</p>
 									</div>
@@ -473,13 +476,13 @@
 					<a name="field2accessor" class="tsd-anchor"></a>
 					<h3>field2accessor</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">field2accessor&lt;T, K&gt;<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, fieldKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/PropertyAccessorDescriptor.html" class="tsd-signature-type">PropertyAccessorDescriptor</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">field2accessor&lt;TObject, TKey&gt;<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TObject</span>, fieldKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TKey</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/PropertyAccessorDescriptor.html" class="tsd-signature-type">PropertyAccessorDescriptor</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TObject</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">TKey</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/reflection/property-accessor.ts#L125">proc7ts/primitives/src/reflection/property-accessor.ts:125</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/reflection/property-accessor.ts#L125">proc7ts/primitives/src/reflection/property-accessor.ts:125</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -492,13 +495,13 @@
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>T</h4>
+									<h4>TObject</h4>
 									<div class="tsd-comment tsd-typography">
 										<p>The type of target object.</p>
 									</div>
 								</li>
 								<li>
-									<h4>K<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span></h4>
+									<h4>TKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">TObject</span></h4>
 									<div class="tsd-comment tsd-typography">
 										<p>Target object property keys type.</p>
 									</div>
@@ -507,19 +510,19 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>target: <span class="tsd-signature-type">T</span></h5>
+									<h5>target: <span class="tsd-signature-type">TObject</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The object containing target field.</p>
 									</div>
 								</li>
 								<li>
-									<h5>fieldKey: <span class="tsd-signature-type">K</span></h5>
+									<h5>fieldKey: <span class="tsd-signature-type">TKey</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Target field key.</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="interfaces/PropertyAccessorDescriptor.html" class="tsd-signature-type">PropertyAccessorDescriptor</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="interfaces/PropertyAccessorDescriptor.html" class="tsd-signature-type">PropertyAccessorDescriptor</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TObject</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">TKey</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h4>
 							<p>New property accessor descriptor.</p>
 						</li>
 					</ul>
@@ -528,13 +531,13 @@
 					<a name="fieldAccessorDescriptor" class="tsd-anchor"></a>
 					<h3>field<wbr>Accessor<wbr>Descriptor</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">field<wbr>Accessor<wbr>Descriptor&lt;T, K&gt;<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, fieldKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/PropertyAccessorDescriptor.html" class="tsd-signature-type">PropertyAccessorDescriptor</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">field<wbr>Accessor<wbr>Descriptor&lt;TObject, TKey&gt;<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TObject</span>, fieldKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TKey</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/PropertyAccessorDescriptor.html" class="tsd-signature-type">PropertyAccessorDescriptor</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TObject</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">TKey</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/reflection/property-accessor.ts#L86">proc7ts/primitives/src/reflection/property-accessor.ts:86</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/reflection/property-accessor.ts#L86">proc7ts/primitives/src/reflection/property-accessor.ts:86</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -545,13 +548,13 @@
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>T</h4>
+									<h4>TObject</h4>
 									<div class="tsd-comment tsd-typography">
 										<p>The type of target object.</p>
 									</div>
 								</li>
 								<li>
-									<h4>K<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span></h4>
+									<h4>TKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">TObject</span></h4>
 									<div class="tsd-comment tsd-typography">
 										<p>Target object property keys type.</p>
 									</div>
@@ -560,19 +563,19 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>target: <span class="tsd-signature-type">T</span></h5>
+									<h5>target: <span class="tsd-signature-type">TObject</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The object containing target field.</p>
 									</div>
 								</li>
 								<li>
-									<h5>fieldKey: <span class="tsd-signature-type">K</span></h5>
+									<h5>fieldKey: <span class="tsd-signature-type">TKey</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Target field key.</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="interfaces/PropertyAccessorDescriptor.html" class="tsd-signature-type">PropertyAccessorDescriptor</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="interfaces/PropertyAccessorDescriptor.html" class="tsd-signature-type">PropertyAccessorDescriptor</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TObject</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">TKey</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -580,13 +583,13 @@
 					<a name="isArrayLike" class="tsd-anchor"></a>
 					<h3>is<wbr>Array<wbr>Like</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Array<wbr>Like&lt;T&gt;<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">value</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">ArrayLike</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Array<wbr>Like&lt;TElement, TOther&gt;<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ArrayLike</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">TOther</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">value</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">ArrayLike</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TElement</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/type/is-array-like.ts#L12">proc7ts/primitives/src/type/is-array-like.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/type/is-array-like.ts#L14">proc7ts/primitives/src/type/is-array-like.ts:14</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -597,19 +600,28 @@
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>T</h4>
+									<h4>TElement</h4>
+									<div class="tsd-comment tsd-typography">
+										<p>Array elements type.</p>
+									</div>
+								</li>
+								<li>
+									<h4>TOther</h4>
+									<div class="tsd-comment tsd-typography">
+										<p>Non-array value type.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>value: <span class="tsd-signature-type">any</span></h5>
+									<h5>value: <span class="tsd-signature-type">ArrayLike</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">TOther</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>A value to check.</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">value</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">ArrayLike</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">value</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">ArrayLike</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TElement</span><span class="tsd-signature-symbol">&gt;</span></h4>
 							<p><code>true</code> if the <code>value</code> has a <code>length</code> property, or <code>false</code> otherwise.</p>
 						</li>
 					</ul>
@@ -619,13 +631,13 @@
 					<h3>is<wbr>Array<wbr>OfElements</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
 						<li class="tsd-signature tsd-kind-icon">is<wbr>Array<wbr>OfElements&lt;T&gt;<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">value</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Array<wbr>OfElements&lt;T&gt;<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">value</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Array<wbr>OfElements&lt;T&gt;<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">value</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/array/array-of-elements.ts#L13">proc7ts/primitives/src/array/array-of-elements.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/array/array-of-elements.ts#L13">proc7ts/primitives/src/array/array-of-elements.ts:13</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -654,7 +666,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/array/array-of-elements.ts#L22">proc7ts/primitives/src/array/array-of-elements.ts:22</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/array/array-of-elements.ts#L22">proc7ts/primitives/src/array/array-of-elements.ts:22</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -671,13 +683,13 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>value: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+									<h5>value: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Either element, readonly array of elements, <code>null</code>, or <code>undefined</code>.</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">value</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">value</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
 							<p><code>true</code> if the given <code>value</code> is an array, or <code>false</code> otherwise.</p>
 						</li>
 					</ul>
@@ -692,7 +704,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/type/presence.ts#L36">proc7ts/primitives/src/type/presence.ts:36</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/type/presence.ts#L36">proc7ts/primitives/src/type/presence.ts:36</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -724,13 +736,13 @@
 					<a name="isIterable" class="tsd-anchor"></a>
 					<h3>is<wbr>Iterable</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Iterable&lt;T&gt;<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">value</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Iterable&lt;TElement, TOther&gt;<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">TOther</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">value</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TElement</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/type/is-iterable.ts#L12">proc7ts/primitives/src/type/is-iterable.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/type/is-iterable.ts#L14">proc7ts/primitives/src/type/is-iterable.ts:14</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -741,19 +753,28 @@
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>T</h4>
+									<h4>TElement</h4>
+									<div class="tsd-comment tsd-typography">
+										<p>Iterable elements type.</p>
+									</div>
+								</li>
+								<li>
+									<h4>TOther</h4>
+									<div class="tsd-comment tsd-typography">
+										<p>Non-iterable value type.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>value: <span class="tsd-signature-type">object</span></h5>
+									<h5>value: <span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">TOther</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>An object value to check.</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">value</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">value</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">Iterable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TElement</span><span class="tsd-signature-symbol">&gt;</span></h4>
 							<p><code>true</code> if the <code>value</code> has a <code>[Symbol.iterator]</code> property set, or <code>false</code> otherwise.</p>
 						</li>
 					</ul>
@@ -768,7 +789,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/type/presence.ts#L25">proc7ts/primitives/src/type/presence.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/type/presence.ts#L25">proc7ts/primitives/src/type/presence.ts:25</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -807,7 +828,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/type/presence.ts#L12">proc7ts/primitives/src/type/presence.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/type/presence.ts#L12">proc7ts/primitives/src/type/presence.ts:12</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -836,16 +857,63 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
-					<a name="isPropertyAccessorDescriptor" class="tsd-anchor"></a>
-					<h3>is<wbr>Property<wbr>Accessor<wbr>Descriptor</h3>
+					<a name="isPromiseLike" class="tsd-anchor"></a>
+					<h3>is<wbr>Promise<wbr>Like</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Property<wbr>Accessor<wbr>Descriptor&lt;V&gt;<span class="tsd-signature-symbol">(</span>desc<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TypedPropertyDescriptor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">desc</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">PropertyAccessorDescriptor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Promise<wbr>Like&lt;TResolved, TOther&gt;<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">PromiseLike</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TResolved</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">TOther</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">value</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">PromiseLike</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TResolved</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/reflection/property-accessor.ts#L27">proc7ts/primitives/src/reflection/property-accessor.ts:27</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/type/is-promise-like.ts#L10">proc7ts/primitives/src/type/is-promise-like.ts:10</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks if the given object is a promise-like instance.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>TResolved</h4>
+									<div class="tsd-comment tsd-typography">
+										<p>A type of the value the promise resolves to.</p>
+									</div>
+								</li>
+								<li>
+									<h4>TOther</h4>
+									<div class="tsd-comment tsd-typography">
+										<p>A type of the plain, not promise-like, value.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">PromiseLike</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TResolved</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">TOther</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A value to check.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">value</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">PromiseLike</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TResolved</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p><code>true</code> if the <code>value</code> is an object or function with <code>then</code> method, or <code>false</code> otherwise.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="isPropertyAccessorDescriptor" class="tsd-anchor"></a>
+					<h3>is<wbr>Property<wbr>Accessor<wbr>Descriptor</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Property<wbr>Accessor<wbr>Descriptor&lt;TValue&gt;<span class="tsd-signature-symbol">(</span>desc<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TypedPropertyDescriptor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">desc</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">PropertyAccessorDescriptor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/reflection/property-accessor.ts#L27">proc7ts/primitives/src/reflection/property-accessor.ts:27</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -856,7 +924,7 @@
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>V</h4>
+									<h4>TValue</h4>
 									<div class="tsd-comment tsd-typography">
 										<p>Property value type.</p>
 									</div>
@@ -865,13 +933,13 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>desc: <span class="tsd-signature-type">TypedPropertyDescriptor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>desc: <span class="tsd-signature-type">TypedPropertyDescriptor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">&gt;</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Target property descriptor.</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">desc</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">PropertyAccessorDescriptor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">desc</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">PropertyAccessorDescriptor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">&gt;</span></h4>
 							<p><code>true</code> if the descriptor has no <code>value</code> or <code>writable</code> attributes set.</p>
 						</li>
 					</ul>
@@ -886,7 +954,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/type/presence.ts#L49">proc7ts/primitives/src/type/presence.ts:49</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/type/presence.ts#L49">proc7ts/primitives/src/type/presence.ts:49</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -925,7 +993,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/value/lazy-value.ts#L16">proc7ts/primitives/src/value/lazy-value.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/value/lazy-value.ts#L16">proc7ts/primitives/src/value/lazy-value.ts:16</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1002,7 +1070,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/fn/merge-functions.ts#L21">proc7ts/primitives/src/fn/merge-functions.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/fn/merge-functions.ts#L21">proc7ts/primitives/src/fn/merge-functions.ts:21</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1124,7 +1192,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/fn/merge-functions.ts#L27">proc7ts/primitives/src/fn/merge-functions.ts:27</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/fn/merge-functions.ts#L27">proc7ts/primitives/src/fn/merge-functions.ts:27</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -1198,7 +1266,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/fn/merge-functions.ts#L33">proc7ts/primitives/src/fn/merge-functions.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/fn/merge-functions.ts#L33">proc7ts/primitives/src/fn/merge-functions.ts:33</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -1229,6 +1297,35 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="newPromiseResolver" class="tsd-anchor"></a>
+					<h3>new<wbr>Promise<wbr>Resolver</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">new<wbr>Promise<wbr>Resolver&lt;T&gt;<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/PromiseResolver.html" class="tsd-signature-type">PromiseResolver</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/promises/promise-resolver.ts#L53">proc7ts/primitives/src/promises/promise-resolver.ts:53</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a promise resolver.</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="interfaces/PromiseResolver.html" class="tsd-signature-type">PromiseResolver</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>New promise resolver.</p>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="noop" class="tsd-anchor"></a>
 					<h3>noop</h3>
@@ -1239,7 +1336,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/fn/noop.ts#L10">proc7ts/primitives/src/fn/noop.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/fn/noop.ts#L10">proc7ts/primitives/src/fn/noop.ts:10</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1256,13 +1353,13 @@
 					<a name="setOfElements" class="tsd-anchor"></a>
 					<h3>set<wbr>OfElements</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>OfElements&lt;T&gt;<span class="tsd-signature-symbol">(</span>elements<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>OfElements&lt;T&gt;<span class="tsd-signature-symbol">(</span>elements<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/array/set-of-elements.ts#L14">proc7ts/primitives/src/array/set-of-elements.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/array/set-of-elements.ts#L14">proc7ts/primitives/src/array/set-of-elements.ts:14</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1279,7 +1376,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>elements: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+									<h5>elements: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Either element, readonly array of elements, <code>null</code>, or <code>undefined</code>.</p>
 									</div>
@@ -1300,7 +1397,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/class/super-class-of.ts#L21">proc7ts/primitives/src/class/super-class-of.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/class/super-class-of.ts#L21">proc7ts/primitives/src/class/super-class-of.ts:21</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1355,13 +1452,13 @@
 					<a name="toPropertyAccessorDescriptor" class="tsd-anchor"></a>
 					<h3>to<wbr>Property<wbr>Accessor<wbr>Descriptor</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">to<wbr>Property<wbr>Accessor<wbr>Descriptor&lt;V&gt;<span class="tsd-signature-symbol">(</span>desc<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TypedPropertyDescriptor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/PropertyAccessorDescriptor.html" class="tsd-signature-type">PropertyAccessorDescriptor</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">to<wbr>Property<wbr>Accessor<wbr>Descriptor&lt;TValue&gt;<span class="tsd-signature-symbol">(</span>desc<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TypedPropertyDescriptor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/PropertyAccessorDescriptor.html" class="tsd-signature-type">PropertyAccessorDescriptor</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/reflection/property-accessor.ts#L42">proc7ts/primitives/src/reflection/property-accessor.ts:42</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/reflection/property-accessor.ts#L42">proc7ts/primitives/src/reflection/property-accessor.ts:42</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1372,7 +1469,7 @@
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>V</h4>
+									<h4>TValue</h4>
 									<div class="tsd-comment tsd-typography">
 										<p>Property value type.</p>
 									</div>
@@ -1381,13 +1478,13 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>desc: <span class="tsd-signature-type">TypedPropertyDescriptor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>desc: <span class="tsd-signature-type">TypedPropertyDescriptor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">&gt;</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Target property descriptor.</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="interfaces/PropertyAccessorDescriptor.html" class="tsd-signature-type">PropertyAccessorDescriptor</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="interfaces/PropertyAccessorDescriptor.html" class="tsd-signature-type">PropertyAccessorDescriptor</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">&gt;</span></h4>
 							<p>Either an accessor descriptor constructed from data descriptor, or <code>desc</code> if it is an accessor descriptor
 							already.</p>
 						</li>
@@ -1397,13 +1494,13 @@
 					<a name="valueByRecipe" class="tsd-anchor"></a>
 					<h3>value<wbr>ByRecipe</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">value<wbr>ByRecipe&lt;T, P&gt;<span class="tsd-signature-symbol">(</span>recipe<span class="tsd-signature-symbol">: </span><a href="modules/ValueRecipe.html" class="tsd-signature-type">ValueRecipe</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">P</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">P</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+						<li class="tsd-signature tsd-kind-icon">value<wbr>ByRecipe&lt;TValue, TArgs&gt;<span class="tsd-signature-symbol">(</span>recipe<span class="tsd-signature-symbol">: </span><a href="modules/ValueRecipe.html" class="tsd-signature-type">ValueRecipe</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TArgs</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TArgs</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TValue</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/value/value-recipe.ts#L56">proc7ts/primitives/src/value/value-recipe.ts:56</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/value/value-recipe.ts#L56">proc7ts/primitives/src/value/value-recipe.ts:56</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1414,13 +1511,13 @@
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>T</h4>
+									<h4>TValue</h4>
 									<div class="tsd-comment tsd-typography">
 										<p>Evaluated value type. This can not be a function.</p>
 									</div>
 								</li>
 								<li>
-									<h4>P<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
+									<h4>TArgs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
 									<div class="tsd-comment tsd-typography">
 										<p>A type of parameters tuple required for value evaluation.</p>
 									</div>
@@ -1429,19 +1526,19 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>recipe: <a href="modules/ValueRecipe.html" class="tsd-signature-type">ValueRecipe</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">P</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>recipe: <a href="modules/ValueRecipe.html" class="tsd-signature-type">ValueRecipe</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TArgs</span><span class="tsd-signature-symbol">&gt;</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Value evaluation recipe.</p>
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">P</span></h5>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">TArgs</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Parameters required for value evaluation.</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">TValue</span></h4>
 							<p>Either the value itself, or the one evaluated by the given evaluator recipe.</p>
 						</li>
 					</ul>
@@ -1456,7 +1553,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/value/value-providers.ts#L12">proc7ts/primitives/src/value/value-providers.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/value/value-providers.ts#L12">proc7ts/primitives/src/value/value-providers.ts:12</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1506,13 +1603,13 @@
 					<a name="valueRecipe" class="tsd-anchor"></a>
 					<h3>value<wbr>Recipe</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">value<wbr>Recipe&lt;T, P&gt;<span class="tsd-signature-symbol">(</span>recipe<span class="tsd-signature-symbol">: </span><a href="modules/ValueRecipe.html" class="tsd-signature-type">ValueRecipe</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">P</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="modules/ValueRecipe.html#Evaluator" class="tsd-signature-type">Evaluator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">P</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">value<wbr>Recipe&lt;TValue, TArgs&gt;<span class="tsd-signature-symbol">(</span>recipe<span class="tsd-signature-symbol">: </span><a href="modules/ValueRecipe.html" class="tsd-signature-type">ValueRecipe</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TArgs</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="modules/ValueRecipe.html#Evaluator" class="tsd-signature-type">Evaluator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TArgs</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/value/value-recipe.ts#L72">proc7ts/primitives/src/value/value-recipe.ts:72</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/value/value-recipe.ts#L72">proc7ts/primitives/src/value/value-recipe.ts:72</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1523,13 +1620,13 @@
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>T</h4>
+									<h4>TValue</h4>
 									<div class="tsd-comment tsd-typography">
 										<p>Evaluated value type. This can not be a function.</p>
 									</div>
 								</li>
 								<li>
-									<h4>P<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
+									<h4>TArgs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
 									<div class="tsd-comment tsd-typography">
 										<p>A type of parameters tuple required for value evaluation.</p>
 									</div>
@@ -1538,13 +1635,13 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>recipe: <a href="modules/ValueRecipe.html" class="tsd-signature-type">ValueRecipe</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">P</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>recipe: <a href="modules/ValueRecipe.html" class="tsd-signature-type">ValueRecipe</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TArgs</span><span class="tsd-signature-symbol">&gt;</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Value recipe to convert.</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="modules/ValueRecipe.html#Evaluator" class="tsd-signature-type">Evaluator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">P</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="modules/ValueRecipe.html#Evaluator" class="tsd-signature-type">Evaluator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TValue</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TArgs</span><span class="tsd-signature-symbol">&gt;</span></h4>
 							<p>Either evaluator itself, or the one evaluating to the given value.</p>
 						</li>
 					</ul>
@@ -1559,7 +1656,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/value/value-providers.ts#L38">proc7ts/primitives/src/value/value-providers.ts:38</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/value/value-providers.ts#L38">proc7ts/primitives/src/value/value-providers.ts:38</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1616,7 +1713,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/923050e/src/value/value-providers.ts#L25">proc7ts/primitives/src/value/value-providers.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/54bad93/src/value/value-providers.ts#L25">proc7ts/primitives/src/value/value-providers.ts:25</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1628,7 +1725,7 @@
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
+									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1685,6 +1782,9 @@
 						<a href="interfaces/Class.html" class="tsd-kind-icon">Class</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/PromiseResolver.html" class="tsd-kind-icon">Promise<wbr>Resolver</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="interfaces/PropertyAccessorDescriptor.html" class="tsd-kind-icon">Property<wbr>Accessor<wbr>Descriptor</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
@@ -1733,6 +1833,9 @@
 						<a href="globals.html#isPresent" class="tsd-kind-icon">is<wbr>Present</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#isPromiseLike" class="tsd-kind-icon">is<wbr>Promise<wbr>Like</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="globals.html#isPropertyAccessorDescriptor" class="tsd-kind-icon">is<wbr>Property<wbr>Accessor<wbr>Descriptor</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
@@ -1743,6 +1846,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="globals.html#mergeFunctions" class="tsd-kind-icon">merge<wbr>Functions</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#newPromiseResolver" class="tsd-kind-icon">new<wbr>Promise<wbr>Resolver</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#noop" class="tsd-kind-icon">noop</a>
@@ -1783,6 +1889,7 @@
 			<ul class="tsd-legend">
 				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 		</div>
 	</div>
