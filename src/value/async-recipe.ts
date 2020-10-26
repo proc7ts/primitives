@@ -2,7 +2,6 @@
  * @packageDocumentation
  * @module @proc7ts/primitives
  */
-
 import { asyncValue } from './async-value';
 
 /**
