@@ -7,9 +7,9 @@
  *
  * Optionally merges function call results.
  *
- * @typeparam TArgs  Function parameter types as tuple.
- * @typeparam TReturn  A type of function result.
- * @typeparam TThis  A type if `this` object expected by function.
+ * @typeParam TArgs  Function parameter types as tuple.
+ * @typeParam TReturn  A type of function result.
+ * @typeParam TThis  A type if `this` object expected by function.
  * @param first  The first function to call.
  * @param second  The second function to call.
  * @param merge  Optional function call results merger. Accepts two function results as arguments and returns the final
