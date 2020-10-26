@@ -9,66 +9,68 @@ import { valueProvider } from './value-providers';
  *
  * This is either a value as-is, or its {@link ValueRecipe.Evaluator evaluator} function.
  *
- * @typeparam T  Evaluated value type. This can not be a function.
- * @typeparam P  A type of parameters tuple required for value evaluation.
+ * @typeParam TValue  Evaluated value type. This can not be a function.
+ * @typeParam TArgs  A type of parameters tuple required for value evaluation.
  */
-export type ValueRecipe<T, P extends any[] = []> =
-    | T
-    | ValueRecipe.Evaluator<T, P>;
+export type ValueRecipe<TValue, TArgs extends any[] = []> =
+    | TValue
+    | ValueRecipe.Evaluator<TValue, TArgs>;
 
 export namespace ValueRecipe {
 
   /**
    * Value evaluator signature.
    *
-   * @typeparam T  Evaluated value type. This can not be a function.
-   * @typeparam P  A type of parameters tuple required for value evaluation.
+   * @typeParam TValue  Evaluated value type. This can not be a function.
+   * @typeParam TArgs  A type of parameters tuple required for value evaluation.
    */
-  export type Evaluator<T, P extends any[] = []> =
+  export type Evaluator<TValue, TArgs extends any[] = []> =
   /**
    * @param args  Parameters required for value evaluation.
    *
    * @returns Evaluated value.
    */
-      (this: void, ...args: P) => T;
+      (this: void, ...args: TArgs) => TValue;
 
 }
 
 /**
  * @internal
  */
-function isValueEvaluator<T, P extends any[]>(
-    value: ValueRecipe<T, P>,
-): value is ValueRecipe.Evaluator<T, P> {
+function isValueEvaluator<TValue, TArgs extends any[]>(
+    value: ValueRecipe<TValue, TArgs>,
+): value is ValueRecipe.Evaluator<TValue, TArgs> {
   return typeof value === 'function';
 }
 
 /**
  * Evaluates a value by its recipe.
  *
- * @typeparam T  Evaluated value type. This can not be a function.
- * @typeparam P  A type of parameters tuple required for value evaluation.
+ * @typeParam TValue  Evaluated value type. This can not be a function.
+ * @typeParam TArgs  A type of parameters tuple required for value evaluation.
  * @param recipe  Value evaluation recipe.
  * @param args  Parameters required for value evaluation.
  *
  * @returns Either the value itself, or the one evaluated by the given evaluator recipe.
  */
-export function valueByRecipe<T, P extends any[]>(
-    recipe: ValueRecipe<T, P>,
-    ...args: P
-): T {
+export function valueByRecipe<TValue, TArgs extends any[]>(
+    recipe: ValueRecipe<TValue, TArgs>,
+    ...args: TArgs
+): TValue {
   return (/*#__INLINE__*/ isValueEvaluator(recipe)) ? recipe(...args) : recipe;
 }
 
 /**
  * Converts a value recipe to its {@link ValueRecipe.Evaluator evaluator} function.
  *
- * @typeparam T  Evaluated value type. This can not be a function.
- * @typeparam P  A type of parameters tuple required for value evaluation.
+ * @typeParam TValue  Evaluated value type. This can not be a function.
+ * @typeParam TArgs  A type of parameters tuple required for value evaluation.
  * @param recipe  Value recipe to convert.
  *
  * @returns Either evaluator itself, or the one evaluating to the given value.
  */
-export function valueRecipe<T, P extends any[]>(recipe: ValueRecipe<T, P>): ValueRecipe.Evaluator<T, P> {
+export function valueRecipe<TValue, TArgs extends any[]>(
+    recipe: ValueRecipe<TValue, TArgs>,
+): ValueRecipe.Evaluator<TValue, TArgs> {
   return (/*#__INLINE__*/ isValueEvaluator(recipe)) ? recipe : valueProvider(recipe);
 }
