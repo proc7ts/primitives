@@ -9,6 +9,8 @@ import { lazyValue } from '../value';
  * A resolver of promise that can be created later or not created at all.
  *
  * Creates the promise only on demand.
+ *
+ * The methods of this object do not require `this` context and can be called as functions.
  */
 export interface PromiseResolver<T> {
 
@@ -19,9 +21,9 @@ export interface PromiseResolver<T> {
    *
    * Can be called before the promise constructed.
    *
-   * @param value  Either a promise value, or a promise-like instance resolving to one.
+   * @param resolution  Either a promise value, or a promise-like instance resolving to one.
    */
-  resolve(value: T | PromiseLike<T>): void;
+  resolve(this: void, ...resolution: undefined extends T ? [(T | PromiseLike<T>)?]: [T | PromiseLike<T>]): void;
 
   /**
    * Rejects the promise.
@@ -32,7 +34,7 @@ export interface PromiseResolver<T> {
    *
    * @param reason  Promise rejection reason.
    */
-  reject(reason?: any): void;
+  reject(this: void, reason?: any): void;
 
   /**
    * Creates a promise resolved by {@link resolve}, or rejected by {@link reject}.
@@ -41,7 +43,7 @@ export interface PromiseResolver<T> {
    *
    * @returns Created promise.
    */
-  promise(): Promise<T>;
+  promise(this: void): Promise<T>;
 
 }
 
@@ -52,7 +54,7 @@ export interface PromiseResolver<T> {
  */
 export function newPromiseResolver<T>(): PromiseResolver<T> {
 
-  let resolvePromise: (value: T | PromiseLike<T>) => void;
+  let resolvePromise: (value?: T | PromiseLike<T>) => void;
   let rejectPromise: (reason?: any) => void;
   let buildPromise = lazyValue(() => new Promise<T>((resolve, reject) => {
     resolvePromise = resolve;
@@ -65,14 +67,14 @@ export function newPromiseResolver<T>(): PromiseResolver<T> {
   };
 
   resolvePromise = value => {
-    settle(() => Promise.resolve(value));
+    settle(() => Promise.resolve(value as T));
   };
   rejectPromise = error => {
     settle(() => Promise.reject(error));
   };
 
   return {
-    resolve(value) {
+    resolve(value?) {
       resolvePromise(value);
     },
     reject(reason) {

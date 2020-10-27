@@ -30,6 +30,29 @@ describe('newPromiseResolver', () => {
       expect(await promise).toBe('foo');
       expect(promise).toBe(resolver.promise());
     });
+    it('resolves the promise by another one', async () => {
+
+      const promise = resolver.promise();
+
+      resolver.resolve(Promise.resolve('foo'));
+      resolver.resolve(Promise.resolve('bar'));
+
+      expect(await promise).toBe('foo');
+      expect(promise).toBe(resolver.promise());
+    });
+    it('resolves the void-value promise', async () => {
+
+      const voidResolver = newPromiseResolver<void>();
+
+      voidResolver.resolve();
+      voidResolver.resolve(void 0);
+      voidResolver.resolve(Promise.resolve());
+
+      const promise = voidResolver.promise();
+
+      expect(await promise).toBeUndefined();
+      expect(promise).toBe(voidResolver.promise());
+    });
   });
 
   describe('reject', () => {
@@ -65,6 +88,7 @@ describe('newPromiseResolver', () => {
 
   describe('promise', () => {
     it('builds the promise once', () => {
+
       const promise = resolver.promise();
 
       expect(resolver.promise()).toBe(promise);
