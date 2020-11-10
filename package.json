@@ -17,13 +17,14 @@
   "bugs": {
     "url": "https://github.com/proc7ts/primitives/issues"
   },
-  "main": "dist/primitives.js",
-  "module": "dist/primitives.mjs",
+  "type": "module",
+  "main": "dist/primitives.cjs",
+  "module": "dist/primitives.js",
   "types": "index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/primitives.mjs",
-      "require": "./dist/primitives.js"
+      "import": "./dist/primitives.js",
+      "require": "./dist/primitives.mjs"
     }
   },
   "devDependencies": {
