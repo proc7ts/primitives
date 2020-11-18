@@ -24,7 +24,7 @@
   "exports": {
     ".": {
       "import": "./dist/primitives.js",
-      "require": "./dist/primitives.mjs"
+      "require": "./dist/primitives.cjs"
     }
   },
   "devDependencies": {
