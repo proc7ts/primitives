@@ -12,7 +12,7 @@ import { lazyValue } from '../value';
  *
  * The methods of this object do not require `this` context and can be called as functions.
  */
-export interface PromiseResolver<T> {
+export interface PromiseResolver<T = void> {
 
   /**
    * Resolves the promise.
@@ -23,7 +23,7 @@ export interface PromiseResolver<T> {
    *
    * @param resolution  Either a promise value, or a promise-like instance resolving to one.
    */
-  resolve(this: void, ...resolution: undefined extends T ? [(T | PromiseLike<T>)?]: [T | PromiseLike<T>]): void;
+  resolve(this: void, resolution: T | PromiseLike<T>): void;
 
   /**
    * Rejects the promise.
@@ -52,9 +52,9 @@ export interface PromiseResolver<T> {
  *
  * @returns New promise resolver.
  */
-export function newPromiseResolver<T>(): PromiseResolver<T> {
+export function newPromiseResolver<T = void>(): PromiseResolver<T> {
 
-  let resolvePromise: (value?: T | PromiseLike<T>) => void;
+  let resolvePromise: (value: T | PromiseLike<T>) => void;
   let rejectPromise: (reason?: any) => void;
   let buildPromise = lazyValue(() => new Promise<T>((resolve, reject) => {
     resolvePromise = resolve;
@@ -67,7 +67,7 @@ export function newPromiseResolver<T>(): PromiseResolver<T> {
   };
 
   resolvePromise = value => {
-    settle(() => Promise.resolve(value as T));
+    settle(() => Promise.resolve(value));
   };
   rejectPromise = error => {
     settle(() => Promise.reject(error));
