@@ -5,8 +5,8 @@
 /**
  * Checks whether the given object is iterable.
  *
- * @typeParam TElement  Iterable elements type.
- * @typeParam TOther  Non-iterable value type.
+ * @typeParam TElement - Iterable elements type.
+ * @typeParam TOther - Non-iterable value type.
  * @param value - An object value to check.
  *
  * @returns `true` if the `value` has a `[Symbol.iterator]` property set, or `false` otherwise.

@@ -9,8 +9,8 @@
  * This is either a value as-is, a promise-like instance resolving to it, or its {@link AsyncRecipe.Evaluator evaluator}
  * function.
  *
- * @typeParam TValue  Evaluated value type. This can not be a function.
- * @typeParam TArgs  A type of parameters tuple required for value evaluation.
+ * @typeParam TValue - Evaluated value type. This can not be a function.
+ * @typeParam TArgs - A type of parameters tuple required for value evaluation.
  */
 export type AsyncRecipe<TValue, TArgs extends any[] = []> =
     | TValue
@@ -22,8 +22,8 @@ export namespace AsyncRecipe {
   /**
    * Asynchronous value evaluator signature.
    *
-   * @typeParam TValue  Evaluated value type. This can not be a function.
-   * @typeParam TArgs  A type of parameters tuple required for value evaluation.
+   * @typeParam TValue - Evaluated value type. This can not be a function.
+   * @typeParam TArgs - A type of parameters tuple required for value evaluation.
    */
   export type Evaluator<TValue, TArgs extends any[] = []> =
   /**
@@ -47,8 +47,8 @@ function isAsyncEvaluator<TValue, TArgs extends any[]>(
 /**
  * Asynchronously evaluates a value by its recipe.
  *
- * @typeParam TValue  Evaluated value type. This can not be a function.
- * @typeParam TArgs  A type of parameters tuple required for value evaluation.
+ * @typeParam TValue - Evaluated value type. This can not be a function.
+ * @typeParam TArgs - A type of parameters tuple required for value evaluation.
  * @param recipe - Asynchronous value evaluation recipe.
  * @param args - Parameters required for value evaluation.
  *
@@ -64,8 +64,8 @@ export async function asyncByRecipe<TValue, TArgs extends any[]>(
 /**
  * Converts asynchronous value recipe to its {@link AsyncRecipe.Evaluator evaluator} function.
  *
- * @typeParam TValue  Evaluated value type. This can not be a function.
- * @typeParam TArgs  A type of parameters tuple required for value evaluation.
+ * @typeParam TValue - Evaluated value type. This can not be a function.
+ * @typeParam TArgs - A type of parameters tuple required for value evaluation.
  * @param recipe - Asynchronous value recipe to convert.
  *
  * @returns A function asynchronously evaluating the value.

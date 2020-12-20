@@ -9,8 +9,8 @@ import { valueProvider } from './value-providers';
  *
  * This is either a value as-is, or its {@link ValueRecipe.Evaluator evaluator} function.
  *
- * @typeParam TValue  Evaluated value type. This can not be a function.
- * @typeParam TArgs  A type of parameters tuple required for value evaluation.
+ * @typeParam TValue - Evaluated value type. This can not be a function.
+ * @typeParam TArgs - A type of parameters tuple required for value evaluation.
  */
 export type ValueRecipe<TValue, TArgs extends any[] = []> =
     | TValue
@@ -21,8 +21,8 @@ export namespace ValueRecipe {
   /**
    * Value evaluator signature.
    *
-   * @typeParam TValue  Evaluated value type. This can not be a function.
-   * @typeParam TArgs  A type of parameters tuple required for value evaluation.
+   * @typeParam TValue - Evaluated value type. This can not be a function.
+   * @typeParam TArgs - A type of parameters tuple required for value evaluation.
    */
   export type Evaluator<TValue, TArgs extends any[] = []> =
   /**
@@ -46,8 +46,8 @@ function isValueEvaluator<TValue, TArgs extends any[]>(
 /**
  * Evaluates a value by its recipe.
  *
- * @typeParam TValue  Evaluated value type. This can not be a function.
- * @typeParam TArgs  A type of parameters tuple required for value evaluation.
+ * @typeParam TValue - Evaluated value type. This can not be a function.
+ * @typeParam TArgs - A type of parameters tuple required for value evaluation.
  * @param recipe - Value evaluation recipe.
  * @param args - Parameters required for value evaluation.
  *
@@ -63,8 +63,8 @@ export function valueByRecipe<TValue, TArgs extends any[]>(
 /**
  * Converts a value recipe to its {@link ValueRecipe.Evaluator evaluator} function.
  *
- * @typeParam TValue  Evaluated value type. This can not be a function.
- * @typeParam TArgs  A type of parameters tuple required for value evaluation.
+ * @typeParam TValue - Evaluated value type. This can not be a function.
+ * @typeParam TArgs - A type of parameters tuple required for value evaluation.
  * @param recipe - Value recipe to convert.
  *
  * @returns Either evaluator itself, or the one evaluating to the given value.

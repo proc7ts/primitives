@@ -5,7 +5,7 @@
 /**
  * Property accessor descriptor. I.e. the one with `get` and `set` functions.
  *
- * @typeParam TValue  Property value type.
+ * @typeParam TValue - Property value type.
  */
 export interface PropertyAccessorDescriptor<TValue> extends TypedPropertyDescriptor<TValue> {
   enumerable?: boolean;
@@ -19,7 +19,7 @@ export interface PropertyAccessorDescriptor<TValue> extends TypedPropertyDescrip
 /**
  * Detects whether the given property descriptor is the one of property accessor.
  *
- * @typeParam TValue  Property value type.
+ * @typeParam TValue - Property value type.
  * @param desc - Target property descriptor.
  *
  * @return `true` if the descriptor has no `value` or `writable` attributes set.
@@ -33,7 +33,7 @@ export function isPropertyAccessorDescriptor<TValue>(
 /**
  * Converts a property descriptor to property accessor descriptor.
  *
- * @typeParam TValue  Property value type.
+ * @typeParam TValue - Property value type.
  * @param desc - Target property descriptor.
  *
  * @return Either an accessor descriptor constructed from data descriptor, or `desc` if it is an accessor descriptor
@@ -78,8 +78,8 @@ export function toPropertyAccessorDescriptor<TValue>(
 /**
  * Creates an property accessor descriptor for the given field.
  *
- * @typeParam TObject  The type of target object.
- * @typeParam TKey  Target object property keys type.
+ * @typeParam TObject - The type of target object.
+ * @typeParam TKey - Target object property keys type.
  * @param target - The object containing target field.
  * @param fieldKey - Target field key.
  */
@@ -115,8 +115,8 @@ export function fieldAccessorDescriptor<TObject, TKey extends keyof TObject>(
  *
  * The converted descriptor is always configurable, enumerable, and writable.
  *
- * @typeParam TObject  The type of target object.
- * @typeParam TKey  Target object property keys type.
+ * @typeParam TObject - The type of target object.
+ * @typeParam TKey - Target object property keys type.
  * @param target - The object containing target field.
  * @param fieldKey - Target field key.
  *
