@@ -20,7 +20,7 @@ export interface PropertyAccessorDescriptor<TValue> extends TypedPropertyDescrip
  * Detects whether the given property descriptor is the one of property accessor.
  *
  * @typeParam TValue  Property value type.
- * @param desc  Target property descriptor.
+ * @param desc - Target property descriptor.
  *
  * @return `true` if the descriptor has no `value` or `writable` attributes set.
  */
@@ -34,7 +34,7 @@ export function isPropertyAccessorDescriptor<TValue>(
  * Converts a property descriptor to property accessor descriptor.
  *
  * @typeParam TValue  Property value type.
- * @param desc  Target property descriptor.
+ * @param desc - Target property descriptor.
  *
  * @return Either an accessor descriptor constructed from data descriptor, or `desc` if it is an accessor descriptor
  * already.
@@ -80,8 +80,8 @@ export function toPropertyAccessorDescriptor<TValue>(
  *
  * @typeParam TObject  The type of target object.
  * @typeParam TKey  Target object property keys type.
- * @param target  The object containing target field.
- * @param fieldKey  Target field key.
+ * @param target - The object containing target field.
+ * @param fieldKey - Target field key.
  */
 export function fieldAccessorDescriptor<TObject, TKey extends keyof TObject>(
     target: TObject,
@@ -117,8 +117,8 @@ export function fieldAccessorDescriptor<TObject, TKey extends keyof TObject>(
  *
  * @typeParam TObject  The type of target object.
  * @typeParam TKey  Target object property keys type.
- * @param target  The object containing target field.
- * @param fieldKey  Target field key.
+ * @param target - The object containing target field.
+ * @param fieldKey - Target field key.
  *
  * @return New property accessor descriptor.
  */

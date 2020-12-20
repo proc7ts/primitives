@@ -21,7 +21,7 @@ export interface PromiseResolver<T = void> {
    *
    * Can be called before the promise constructed.
    *
-   * @param resolution  Either a promise value, or a promise-like instance resolving to one.
+   * @param resolution - Either a promise value, or a promise-like instance resolving to one.
    */
   resolve(this: void, resolution: T | PromiseLike<T>): void;
 
@@ -32,7 +32,7 @@ export interface PromiseResolver<T = void> {
    *
    * Can be called before the promise constructed.
    *
-   * @param reason  Promise rejection reason.
+   * @param reason - Promise rejection reason.
    */
   reject(this: void, reason?: any): void;
 

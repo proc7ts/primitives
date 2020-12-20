@@ -10,9 +10,9 @@
  * @typeParam TArgs  Function parameter types as tuple.
  * @typeParam TReturn  A type of function result.
  * @typeParam TThis  A type if `this` object expected by function.
- * @param first  The first function to call.
- * @param second  The second function to call.
- * @param merge  Optional function call results merger. Accepts two function results as arguments and returns the final
+ * @param first - The first function to call.
+ * @param second - The second function to call.
+ * @param merge - Optional function call results merger. Accepts two function results as arguments and returns the final
  * result. When omitted the first function call result is ignored and the second function's call result is returned.
  *
  * @return A function that calls both of the given ones and merges their results. If one of the functions is absent,

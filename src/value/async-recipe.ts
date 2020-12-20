@@ -27,7 +27,7 @@ export namespace AsyncRecipe {
    */
   export type Evaluator<TValue, TArgs extends any[] = []> =
   /**
-   * @param args  Parameters required for value evaluation.
+   * @param args - Parameters required for value evaluation.
    *
    * @returns Either an valuated value, or a promise-like instance resolving to one.
    */
@@ -49,8 +49,8 @@ function isAsyncEvaluator<TValue, TArgs extends any[]>(
  *
  * @typeParam TValue  Evaluated value type. This can not be a function.
  * @typeParam TArgs  A type of parameters tuple required for value evaluation.
- * @param recipe  Asynchronous value evaluation recipe.
- * @param args  Parameters required for value evaluation.
+ * @param recipe - Asynchronous value evaluation recipe.
+ * @param args - Parameters required for value evaluation.
  *
  * @returns A promise resolved to the value.
  */
@@ -66,7 +66,7 @@ export async function asyncByRecipe<TValue, TArgs extends any[]>(
  *
  * @typeParam TValue  Evaluated value type. This can not be a function.
  * @typeParam TArgs  A type of parameters tuple required for value evaluation.
- * @param recipe  Asynchronous value recipe to convert.
+ * @param recipe - Asynchronous value recipe to convert.
  *
  * @returns A function asynchronously evaluating the value.
  */

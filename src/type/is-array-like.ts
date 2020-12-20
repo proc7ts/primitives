@@ -7,7 +7,7 @@
  *
  * @typeParam TElement  Array elements type.
  * @typeParam TOther  Non-array value type.
- * @param value  A value to check.
+ * @param value - A value to check.
  *
  * @returns `true` if the `value` has a `length` property, or `false` otherwise.
  */

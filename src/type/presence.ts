@@ -5,7 +5,7 @@
 /**
  * A function that checks whether the given value is present.
  *
- * @param value  A value to check.
+ * @param value - A value to check.
  *
  * @returns `true` when the given `value` is not `null` or `undefined`, or `false` otherwise.
  */
@@ -18,7 +18,7 @@ export function isPresent<T>(value: T | undefined | null): value is T {
  *
  * This is a direct opposite to `isPresent()`.
  *
- * @param value  A value to check.
+ * @param value - A value to check.
  *
  * @returns `true` when the given `value` is `null` or `undefined`, or `false` otherwise.
  */
@@ -29,7 +29,7 @@ export function isNotPresent<T>(value: T | undefined | null): value is T {
 /**
  * A function that checks whether the given value is defined.
  *
- * @param value  A value to check.
+ * @param value - A value to check.
  *
  * @returns `true` when the given `value` is not `undefined`, or `false` otherwise.
  */
@@ -42,7 +42,7 @@ export function isDefined<T>(value: T | undefined): value is T {
  *
  * This is a direct opposite to `isDefined()`.
  *
- * @param value  A value to check.
+ * @param value - A value to check.
  *
  * @returns `true` when the given `value` is `undefined`, or `false` otherwise.
  */

@@ -26,7 +26,7 @@ export namespace ValueRecipe {
    */
   export type Evaluator<TValue, TArgs extends any[] = []> =
   /**
-   * @param args  Parameters required for value evaluation.
+   * @param args - Parameters required for value evaluation.
    *
    * @returns Evaluated value.
    */
@@ -48,8 +48,8 @@ function isValueEvaluator<TValue, TArgs extends any[]>(
  *
  * @typeParam TValue  Evaluated value type. This can not be a function.
  * @typeParam TArgs  A type of parameters tuple required for value evaluation.
- * @param recipe  Value evaluation recipe.
- * @param args  Parameters required for value evaluation.
+ * @param recipe - Value evaluation recipe.
+ * @param args - Parameters required for value evaluation.
  *
  * @returns Either the value itself, or the one evaluated by the given evaluator recipe.
  */
@@ -65,7 +65,7 @@ export function valueByRecipe<TValue, TArgs extends any[]>(
  *
  * @typeParam TValue  Evaluated value type. This can not be a function.
  * @typeParam TArgs  A type of parameters tuple required for value evaluation.
- * @param recipe  Value recipe to convert.
+ * @param recipe - Value recipe to convert.
  *
  * @returns Either evaluator itself, or the one evaluating to the given value.
  */

@@ -23,8 +23,8 @@ export function setOfElements<T>(elements: T | readonly T[] | null | undefined):
  * Adds to the set a single element, all `elements` of the given array, or nothing when `elements` is `null`
  * or `undefined`.
  *
- * @param set  Target set to add elements to.
- * @param elements  Element(s) to add to the `set`. Either element, readonly array of elements, `null`, or `undefined`.
+ * @param set - Target set to add elements to.
+ * @param elements - Element(s) to add to the `set`. Either element, readonly array of elements, `null`, or `undefined`.
  *
  * @returns The target `set`.
  */

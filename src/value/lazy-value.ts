@@ -9,7 +9,7 @@ import { valueProvider } from './value-providers';
  *
  * The returned function evaluates the value first time it is called. Then it just returns previously evaluated value.
  *
- * @param provider  A no-arg function evaluating the value.
+ * @param provider - A no-arg function evaluating the value.
  *
  * @returns A function that returns the value evaluated by `provider`.
  */

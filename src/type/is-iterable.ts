@@ -7,7 +7,7 @@
  *
  * @typeParam TElement  Iterable elements type.
  * @typeParam TOther  Non-iterable value type.
- * @param value  An object value to check.
+ * @param value - An object value to check.
  *
  * @returns `true` if the `value` has a `[Symbol.iterator]` property set, or `false` otherwise.
  */
