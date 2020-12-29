@@ -7,6 +7,7 @@
 	<meta name="description" content="Documentation for Primitives">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
 </head>
 <body>
 <header>
@@ -51,48 +52,19 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../modules.html">Primitives</a>
 				</li>
 				<li>
-					<a href="ValueRecipe.html">ValueRecipe</a>
+					<a href="valuerecipe.html">ValueRecipe</a>
 				</li>
 			</ul>
-			<h1>Namespace ValueRecipe&lt;TValue, TArgs&gt;</h1>
+			<h1>Namespace ValueRecipe</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>A recipe of value evaluation.</p>
-					</div>
-					<p>This is either a value as-is, or its <a href="ValueRecipe.html#Evaluator">evaluator</a> function.</p>
-				</div>
-			</section>
-			<section class="tsd-panel tsd-type-parameters">
-				<h3>Type parameters</h3>
-				<ul class="tsd-type-parameters">
-					<li>
-						<h4>TValue</h4>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>Evaluated value type. This can not be a function.</p>
-							</div>
-						</div>
-					</li>
-					<li>
-						<h4>TArgs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span> = <span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">]</span></h4>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>A type of parameters tuple required for value evaluation.</p>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -100,7 +72,7 @@
 						<section class="tsd-index-section ">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter"><a href="ValueRecipe.html#Evaluator" class="tsd-kind-icon">Evaluator</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter"><a href="valuerecipe.html#evaluator" class="tsd-kind-icon">Evaluator</a></li>
 							</ul>
 						</section>
 					</div>
@@ -109,12 +81,12 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Type aliases</h2>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter">
-					<a name="Evaluator" class="tsd-anchor"></a>
+					<a name="evaluator" class="tsd-anchor"></a>
 					<h3>Evaluator</h3>
 					<div class="tsd-signature tsd-kind-icon">Evaluator&lt;TValue, TArgs&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>this<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TArgs</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">TValue</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/2aa319c/src/value/value-recipe.ts#L27">proc7ts/primitives/src/value/value-recipe.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/proc7ts/primitives/blob/5cec919/src/value/value-recipe.ts#L27">proc7ts/primitives/src/value/value-recipe.ts:27</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -145,13 +117,11 @@
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter-signature">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-namespace">
 									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>this<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TArgs</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TValue</span></li>
 								</ul>
 								<ul class="tsd-descriptions">
 									<li class="tsd-description">
-										<div class="tsd-comment tsd-typography">
-										</div>
 										<h4 class="tsd-parameters-title">Parameters</h4>
 										<ul class="tsd-parameters">
 											<li>
@@ -160,9 +130,7 @@
 											<li>
 												<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">TArgs</span></h5>
 												<div class="tsd-comment tsd-typography">
-													<div class="lead">
-														<p>Parameters required for value evaluation.</p>
-													</div>
+													<p>Parameters required for value evaluation.</p>
 												</div>
 											</li>
 										</ul>
@@ -179,21 +147,21 @@
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
-					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
+					<li class=" ">
+						<a href="../modules.html">Exports</a>
 					</li>
-					<li class=" tsd-kind-namespace tsd-has-type-parameter">
-						<a href="AsyncRecipe.html">Async<wbr>Recipe</a>
+					<li class=" tsd-kind-namespace">
+						<a href="asyncrecipe.html">Async<wbr>Recipe</a>
 					</li>
-					<li class="current tsd-kind-namespace tsd-has-type-parameter">
-						<a href="ValueRecipe.html">Value<wbr>Recipe</a>
+					<li class="current tsd-kind-namespace">
+						<a href="valuerecipe.html">Value<wbr>Recipe</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter">
-						<a href="ValueRecipe.html#Evaluator" class="tsd-kind-icon">Evaluator</a>
+						<a href="valuerecipe.html#evaluator" class="tsd-kind-icon">Evaluator</a>
 					</li>
 				</ul>
 			</nav>
@@ -212,10 +180,6 @@
 			<ul class="tsd-legend">
 				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
