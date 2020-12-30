@@ -40,10 +40,21 @@ const alwaysSupply$ = (/*#__PURE__*/ new AlwaysSupply());
 /**
  * Builds a always-supply instance.
  *
- * The {@link Supply.off} method of returned supply does nothing.
+ * The {@link Supply.off} method of the returned supply does nothing.
  *
  * @returns A supply instance that can not be cut off.
  */
 export function alwaysSupply(): Supply {
   return alwaysSupply$;
+}
+
+/**
+ * Checks whether the given supply is an {@link AlwaysSupply | always-supply} instance.
+ *
+ * @param supply - A supply to check.
+ *
+ * @returns `true` is the given `supply` can not be cut off, or `false` otherwise.
+ */
+export function isAlwaysSupply(supply: Supply): boolean {
+  return supply === alwaysSupply$;
 }

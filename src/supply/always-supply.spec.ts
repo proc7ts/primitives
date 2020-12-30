@@ -1,4 +1,5 @@
-import { alwaysSupply } from './always-supply';
+import { alwaysSupply, isAlwaysSupply } from './always-supply';
+import { neverSupply } from './never-supply';
 import { Supply } from './supply';
 
 describe('alwaysSupply', () => {
@@ -57,5 +58,17 @@ describe('alwaysSupply', () => {
       otherSupply.off('reason');
       expect(supply.isOff).toBe(false);
     });
+  });
+});
+
+describe('isAlwaysSupply', () => {
+  it('returns `true` for `alwaysSupply()` result', () => {
+    expect(isAlwaysSupply(alwaysSupply())).toBe(true);
+  });
+  it('returns `false` for `neverSupply()` result', () => {
+    expect(isAlwaysSupply(neverSupply())).toBe(false);
+  });
+  it('returns `false` for arbitrary supply', () => {
+    expect(isAlwaysSupply(new Supply())).toBe(false);
   });
 });
