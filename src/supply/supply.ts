@@ -2,8 +2,9 @@
  * @packageDocumentation
  * @module @proc7ts/primitives
  */
-import { noop } from '../fn';
 import type { SupplyPeer } from './supply-peer';
+import type { SupplyState } from './supply-state.impl';
+import { initialSupplyState, newSupplyState, SupplyState__symbol } from './supply-state.impl';
 
 /**
  * Supply handle.
@@ -17,12 +18,7 @@ export class Supply implements SupplyPeer {
   /**
    * @internal
    */
-  private _off: (reason?: unknown) => void;
-
-  /**
-   * @internal
-   */
-  private _whenOff: (callback: (reason?: unknown) => void) => void;
+  [SupplyState__symbol]: SupplyState;
 
   /**
    * Constructs new supply instance.
@@ -30,21 +26,8 @@ export class Supply implements SupplyPeer {
    * @param off - A function to call when the supply is {@link Supply.off cut off}. Accepts optional cut off reason
    * as its only parameter. No-op by default.
    */
-  constructor(off: (this: void, reason?: unknown) => void = noop) {
-    this._off = reason => {
-      this._whenOff = callback => callback(reason);
-      this._off = noop;
-      off(reason);
-    };
-    this._whenOff = callback => {
-
-      const prev = this._off;
-
-      this._off = reason => {
-        prev(reason);
-        callback(reason);
-      };
-    };
+  constructor(off?: (this: void, reason?: unknown) => void) {
+    this[SupplyState__symbol] = off ? newSupplyState(off) : initialSupplyState;
   }
 
   /**
@@ -60,7 +43,7 @@ export class Supply implements SupplyPeer {
    * `true` means nothing would be supplied any more.
    */
   get isOff(): boolean {
-    return this._off === noop;
+    return this[SupplyState__symbol].isOff;
   }
 
   /**
@@ -76,7 +59,7 @@ export class Supply implements SupplyPeer {
    * @returns The cut off supply instance.
    */
   off(reason?: unknown): Supply {
-    this._off(reason);
+    this[SupplyState__symbol].off(this, reason);
     return this;
   }
 
@@ -90,7 +73,7 @@ export class Supply implements SupplyPeer {
    * @returns `this` instance.
    */
   whenOff(callback: (this: void, reason?: unknown) => void): this {
-    this._whenOff(callback);
+    this[SupplyState__symbol].whenOff(this, callback);
     return this;
   }
 
@@ -101,11 +84,9 @@ export class Supply implements SupplyPeer {
    * once this supply is cut off with any reason except `undefined`.
    */
   whenDone(): Promise<void> {
-    return new Promise(
-        (resolve, reject) => this.whenOff(
-            reason => reason === undefined ? resolve() : reject(reason),
-        ),
-    );
+    return new Promise((resolve, reject) => this.whenOff(
+        reason => reason === undefined ? resolve() : reject(reason),
+    ));
   }
 
   /**
@@ -113,7 +94,7 @@ export class Supply implements SupplyPeer {
    *
    * Once this supply is {@link off cut off}, `another` one will be cut off with the same reason.
    *
-   * Calling this method has the same effect as calling {@link needs another.supply.need(this)}.
+   * Calling this method has the same effect as calling `another.supply.needs(this)`.
    *
    * @param another - A supply peer to make dependent on this one.
    *

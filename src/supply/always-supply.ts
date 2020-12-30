@@ -38,7 +38,7 @@ class AlwaysSupply extends Supply {
 const alwaysSupply$ = (/*#__PURE__*/ new AlwaysSupply());
 
 /**
- * Builds a always-supply instance.
+ * Builds an always-supply instance.
  *
  * The {@link Supply.off} method of the returned supply does nothing.
  *
