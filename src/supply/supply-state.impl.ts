@@ -40,6 +40,10 @@ const doneSupplyState: SupplyState = {
 };
 
 function cutOffSupplyState(reason: unknown): SupplyState {
+  if (reason === undefined) {
+    return doneSupplyState;
+  }
+
   return {
     isOff: true,
     off: doneSupplyState$off,
@@ -60,7 +64,7 @@ export function newSupplyState(off: (this: void, reason?: unknown) => void): Sup
   return {
     isOff: false,
     off(supply: Supply, reason?: unknown): void {
-      supply[SupplyState__symbol] = reason === undefined ? doneSupplyState : cutOffSupplyState(reason);
+      supply[SupplyState__symbol] = cutOffSupplyState(reason);
       off(reason);
     },
     whenOff(_supply: Supply, callback: (reason?: unknown) => void): void {
