@@ -99,6 +99,22 @@ describe('Supply', () => {
     });
   });
 
+  describe('needs', () => {
+    it('is cut off when required supply is cut off', () => {
+
+      const whenOff = jest.fn();
+      const anotherSupply = new Supply();
+
+      expect(supply.needs(anotherSupply)).toBe(supply);
+      supply.whenOff(whenOff);
+
+      const reason = 'some reason';
+
+      anotherSupply.off(reason);
+      expect(whenOff).toHaveBeenCalledWith(reason);
+    });
+  });
+
   describe('cuts', () => {
     it('cuts off another supply when cutting this one off', () => {
 
@@ -126,19 +142,31 @@ describe('Supply', () => {
     });
   });
 
-  describe('needs', () => {
+  describe('as', () => {
     it('is cut off when required supply is cut off', () => {
 
       const whenOff = jest.fn();
       const anotherSupply = new Supply();
 
-      expect(supply.needs(anotherSupply)).toBe(supply);
+      expect(supply.as(anotherSupply)).toBe(supply);
       supply.whenOff(whenOff);
 
       const reason = 'some reason';
 
       anotherSupply.off(reason);
       expect(whenOff).toHaveBeenCalledWith(reason);
+    });
+    it('cuts off another supply when cutting this one off', () => {
+
+      const whenAnotherOff = jest.fn();
+      const anotherSupply = new Supply(whenAnotherOff);
+
+      expect(supply.as(anotherSupply)).toBe(supply);
+
+      const reason = 'some reason';
+
+      supply.off(reason);
+      expect(whenAnotherOff).toHaveBeenCalledWith(reason);
     });
   });
 });

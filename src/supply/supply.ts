@@ -119,4 +119,17 @@ export class Supply implements SupplyPeer {
     return this;
   }
 
+  /**
+   * Makes this and another supply depend on each other.
+   *
+   * Calling this method is the same as calling `.needs(another).cuts(another)`.
+   *
+   * @param another - A supply peer to make this one to mutually depend on.
+   *
+   * @returns `this` instance.
+   */
+  as(another: SupplyPeer): this {
+    return this.needs(another).cuts(another);
+  }
+
 }
