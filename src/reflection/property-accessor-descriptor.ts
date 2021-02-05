@@ -1,8 +1,4 @@
 /**
- * @packageDocumentation
- * @module @proc7ts/primitives
- */
-/**
  * Property accessor descriptor. I.e. the one with `get` and `set` functions.
  *
  * @typeParam TValue - Property value type.
@@ -73,63 +69,4 @@ export function toPropertyAccessorDescriptor<TValue>(
   delete accessorDesc.value;
 
   return accessorDesc;
-}
-
-/**
- * Creates an property accessor descriptor for the given field.
- *
- * @typeParam TObject - The type of target object.
- * @typeParam TKey - Target object property keys type.
- * @param target - The object containing target field.
- * @param fieldKey - Target field key.
- */
-export function fieldAccessorDescriptor<TObject, TKey extends keyof TObject>(
-    target: TObject,
-    fieldKey: TKey,
-): PropertyAccessorDescriptor<TObject[TKey]> {
-
-  const value__symbol = Symbol(`${String(fieldKey)}:value`);
-
-  interface ValueHost {
-    [value__symbol]: TObject[TKey];
-  }
-
-  const initial: TObject[TKey] = target[fieldKey];
-
-  return {
-    configurable: true,
-    enumerable: true,
-    get(this: ValueHost): TObject[TKey] {
-      return value__symbol in this ? this[value__symbol] : initial;
-    },
-    set(this: ValueHost, newValue) {
-      this[value__symbol] = newValue;
-    },
-  };
-}
-
-/**
- * Converts an object field to property accessor.
- *
- * Defines a new property with the given name in the target object and returns its descriptor.
- *
- * The converted descriptor is always configurable, enumerable, and writable.
- *
- * @typeParam TObject - The type of target object.
- * @typeParam TKey - Target object property keys type.
- * @param target - The object containing target field.
- * @param fieldKey - Target field key.
- *
- * @return New property accessor descriptor.
- */
-export function field2accessor<TObject, TKey extends keyof TObject>(
-    target: TObject,
-    fieldKey: TKey,
-): PropertyAccessorDescriptor<TObject[TKey]> {
-
-  const desc = fieldAccessorDescriptor(target, fieldKey);
-
-  Object.defineProperty(target, fieldKey, desc);
-
-  return desc;
 }
