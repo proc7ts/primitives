@@ -7,7 +7,7 @@
  *
  * @returns The number of arguments, except for the trailing `undefined` values.
  */
-export function countArgs(args: readonly unknown[]): number {
+export function countArgs(args: ArrayLike<unknown>): number {
 
   let len = args.length;
 
