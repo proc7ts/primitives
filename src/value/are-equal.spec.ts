@@ -1,14 +1,14 @@
-import { isEqualTo } from './is-equal-to';
+import { areEqual } from './are-equal';
 
-describe('isEqualTo', () => {
+describe('areEqual', () => {
   it('returns `true` for strictly equal values', () => {
-    expect(isEqualTo('a', 'a')).toBe(true);
+    expect(areEqual('a', 'a')).toBe(true);
   });
   it('returns `false` for distinct values', () => {
-    expect(isEqualTo('a', 'b')).toBe(false);
+    expect(areEqual('a', 'b')).toBe(false);
   });
   it('returns `false` non-strictly equal values', () => {
     // noinspection JSPrimitiveTypeWrapperUsage
-    expect(isEqualTo('a', new String('a'))).toBe(false);
+    expect(areEqual('a', new String('a'))).toBe(false);
   });
 });
