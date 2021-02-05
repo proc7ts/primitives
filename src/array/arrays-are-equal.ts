@@ -1,4 +1,4 @@
-import { areEqual } from '../value';
+import { areTheSame } from '../value';
 
 /**
  * Checks whether two arrays are equal.
@@ -94,7 +94,7 @@ export function arraysAreEqual<T>(
       : arrayElementsAreEqual(
           first,
           second,
-          areEqual,
+          areTheSame,
           compareOrFromOrLength,
           fromOrLength,
       );
