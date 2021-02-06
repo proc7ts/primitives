@@ -1,8 +1,4 @@
 /**
- * @packageDocumentation
- * @module @proc7ts/primitives
- */
-/**
  * Merges two functions by calling one after another.
  *
  * Optionally merges function call results.

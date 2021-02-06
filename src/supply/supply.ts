@@ -1,7 +1,3 @@
-/**
- * @packageDocumentation
- * @module @proc7ts/primitives
- */
 import type { SupplyPeer } from './supply-peer';
 import type { SupplyState } from './supply-state.impl';
 import { initialSupplyState, newSupplyState, SupplyState__symbol } from './supply-state.impl';

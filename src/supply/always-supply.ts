@@ -1,7 +1,3 @@
-/**
- * @packageDocumentation
- * @module @proc7ts/primitives
- */
 import { Supply } from './supply';
 import type { SupplyPeer } from './supply-peer';
 

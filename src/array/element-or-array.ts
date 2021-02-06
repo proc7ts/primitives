@@ -1,9 +1,4 @@
 /**
- * @packageDocumentation
- * @module @proc7ts/primitives
- */
-
-/**
  * Builds element or array of the given elements.
  *
  * @param source - A source of elements as their iterable or array-like container.

@@ -1,8 +1,4 @@
 /**
- * @packageDocumentation
- * @module @proc7ts/primitives
- */
-/**
  * Creates a provider of the only argument.
  *
  * @param value - A value to return.

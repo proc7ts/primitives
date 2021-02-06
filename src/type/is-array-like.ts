@@ -1,8 +1,4 @@
 /**
- * @packageDocumentation
- * @module @proc7ts/primitives
- */
-/**
  * Checks whether the given value is array-like.
  *
  * @typeParam TElement - Array elements type.

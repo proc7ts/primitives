@@ -1,7 +1,3 @@
-/**
- * @packageDocumentation
- * @module @proc7ts/primitives
- */
 import { noop } from '../fn';
 import { lazyValue } from '../value';
 

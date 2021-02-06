@@ -1,9 +1,4 @@
 /**
- * @packageDocumentation
- * @module @proc7ts/primitives
- */
-
-/**
  * Checks whether the given value is an array.
  *
  * @param value - Either element, array of elements, `null`, or `undefined`.

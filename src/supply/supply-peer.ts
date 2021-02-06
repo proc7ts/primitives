@@ -1,7 +1,3 @@
-/**
- * @packageDocumentation
- * @module @proc7ts/primitives
- */
 import type { Supply } from './supply';
 
 /**

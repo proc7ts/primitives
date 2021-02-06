@@ -1,8 +1,4 @@
 /**
- * @packageDocumentation
- * @module @proc7ts/primitives
- */
-/**
  * Checks if the given object is a promise-like instance.
  *
  * @typeParam TResolved - A type of the value the promise resolves to.

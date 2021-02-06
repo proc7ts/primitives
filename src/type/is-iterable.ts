@@ -1,8 +1,4 @@
 /**
- * @packageDocumentation
- * @module @proc7ts/primitives
- */
-/**
  * Checks whether the given object is iterable.
  *
  * @typeParam TElement - Iterable elements type.

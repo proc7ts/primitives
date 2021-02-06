@@ -1,9 +1,4 @@
 /**
- * @packageDocumentation
- * @module @proc7ts/primitives
- */
-
-/**
  * Asynchronous recipe of value evaluation.
  *
  * This is either a value as-is, a promise-like instance resolving to it, or its {@link AsyncRecipe.Evaluator evaluator}

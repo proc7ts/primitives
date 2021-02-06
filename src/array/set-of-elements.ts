@@ -1,7 +1,3 @@
-/**
- * @packageDocumentation
- * @module @proc7ts/primitives
- */
 import { isArrayOfElements } from './array-of-elements';
 
 /**

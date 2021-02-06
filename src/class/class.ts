@@ -1,8 +1,4 @@
 /**
- * @packageDocumentation
- * @module @proc7ts/primitives
- */
-/**
  * Arbitrary class constructor.
  *
  * @typeParam T - A type of class instance.

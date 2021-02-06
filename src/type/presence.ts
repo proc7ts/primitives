@@ -1,8 +1,4 @@
 /**
- * @packageDocumentation
- * @module @proc7ts/primitives
- */
-/**
  * A function that checks whether the given value is present.
  *
  * @param value - A value to check.
