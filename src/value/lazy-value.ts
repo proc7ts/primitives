@@ -11,7 +11,19 @@ import { valueProvider } from './value-providers';
  */
 export function lazyValue<T>(provider: (this: void) => T): (this: void) => T {
 
-  let get = (): T => (get = valueProvider(provider()))();
+  let get = (): T => {
+    get = lazyValue$recurrent; // Prevent recurrent evaluation
+
+    const value = provider();
+
+    get = valueProvider(value);
+
+    return value;
+  };
 
   return (): T => get();
+}
+
+function lazyValue$recurrent(): never {
+  throw new TypeError('Recurrent evaluation');
 }

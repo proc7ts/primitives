@@ -23,4 +23,8 @@ describe('lazyValue', () => {
     expect(lazy()).toBe('test');
     expect(provider).toHaveBeenCalledTimes(1);
   });
+  it('prevents recurrent evaluation', () => {
+    provider.mockImplementation(lazy);
+    expect(lazy).toThrow('Recurrent evaluation');
+  });
 });
