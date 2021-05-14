@@ -14,10 +14,12 @@ import type { Class } from './class';
  * @return A super class `satisfying` the given criteria, or `undefined` if there is no such super class, or there is no
  * super class at all (e.g. when `Object` is passed in).
  */
-export function superClassOf(type: Class, satisfying: (type: Class) => boolean = () => true): Class | undefined {
+export function superClassOf(
+    type: Class,
+    satisfying: (this: void, type: Class) => boolean = () => true,
+): Class | undefined {
 
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-  const prototype: object = Object.getPrototypeOf(type.prototype);
+  const prototype = Reflect.getPrototypeOf(type.prototype);
 
   if (prototype == null) {
     return;

@@ -15,14 +15,14 @@ import type { PropertyAccessorDescriptor } from './property-accessor-descriptor'
  *
  * @return New property accessor descriptor.
  */
-export function field2accessor<TObject, TKey extends keyof TObject>(
+export function field2accessor<TObject extends object, TKey extends keyof TObject>(
     target: TObject,
     fieldKey: TKey,
 ): PropertyAccessorDescriptor<TObject[TKey]> {
 
   const desc = fieldAccessorDescriptor(target, fieldKey);
 
-  Object.defineProperty(target, fieldKey, desc);
+  Reflect.defineProperty(target, fieldKey, desc);
 
   return desc;
 }
