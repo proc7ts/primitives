@@ -11,7 +11,7 @@ describe('field2accessor', () => {
   });
 
   it('converts field to accessor', () => {
-    expect(Object.getOwnPropertyDescriptor(target, 'a')).toEqual(desc);
+    expect(Reflect.getOwnPropertyDescriptor(target, 'a')).toEqual(desc);
   });
   it('converts to configurable property', () => {
     expect(desc.configurable).toBe(true);
