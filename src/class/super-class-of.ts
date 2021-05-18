@@ -1,4 +1,4 @@
-import type { Class } from './class';
+import type { AbstractClass } from './abstract-class';
 
 /**
  * Detects a super class of the given class optionally satisfying the given criteria.
@@ -15,9 +15,9 @@ import type { Class } from './class';
  * super class at all (e.g. when `Object` is passed in).
  */
 export function superClassOf(
-    type: Class,
-    satisfying: (this: void, type: Class) => boolean = () => true,
-): Class | undefined {
+    type: AbstractClass,
+    satisfying: (this: void, type: AbstractClass) => boolean = () => true,
+): AbstractClass | undefined {
 
   const prototype = Reflect.getPrototypeOf(type.prototype);
 
@@ -25,7 +25,7 @@ export function superClassOf(
     return;
   }
 
-  const superType = prototype.constructor as Class;
+  const superType = prototype.constructor as AbstractClass;
 
   if (satisfying(superType)) {
     return superType;
