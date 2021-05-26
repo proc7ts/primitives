@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { superClassOf } from './super-class-of';
 
 describe('superClassOf', () => {

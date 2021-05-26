@@ -1,3 +1,4 @@
+import { beforeEach, describe, expect, it } from '@jest/globals';
 import { asis } from '../fn';
 import type { PromiseResolver } from './promise-resolver';
 import { newPromiseResolver } from './promise-resolver';
@@ -18,7 +19,7 @@ describe('newPromiseResolver', () => {
       const promise = resolver.promise();
 
       expect(await promise).toBe('foo');
-      expect(promise).toBe(resolver.promise());
+      await expect(promise).toBe(resolver.promise());
     });
     it('resolves the promise after its construction', async () => {
 
@@ -28,7 +29,7 @@ describe('newPromiseResolver', () => {
       resolver.resolve('bar');
 
       expect(await promise).toBe('foo');
-      expect(promise).toBe(resolver.promise());
+      await expect(promise).toBe(resolver.promise());
     });
     it('resolves the promise by another one', async () => {
 
@@ -38,7 +39,7 @@ describe('newPromiseResolver', () => {
       resolver.resolve(Promise.resolve('bar'));
 
       expect(await promise).toBe('foo');
-      expect(promise).toBe(resolver.promise());
+      await expect(promise).toBe(resolver.promise());
     });
     it('resolves the void-value promise', async () => {
 
@@ -51,7 +52,7 @@ describe('newPromiseResolver', () => {
       const promise = voidResolver.promise();
 
       expect(await promise).toBeUndefined();
-      expect(promise).toBe(voidResolver.promise());
+      await expect(promise).toBe(voidResolver.promise());
     });
   });
 
@@ -72,7 +73,7 @@ describe('newPromiseResolver', () => {
       const promise = resolver.promise();
 
       expect(await promise.catch(asis)).toBe(error1);
-      expect(promise).toBe(resolver.promise());
+      await expect(promise).toBe(resolver.promise());
     });
     it('rejects the promise after its construction', async () => {
 
@@ -82,18 +83,18 @@ describe('newPromiseResolver', () => {
       resolver.reject(error2);
 
       expect(await promise.catch(asis)).toBe(error1);
-      expect(promise).toBe(resolver.promise());
+      await expect(promise).toBe(resolver.promise());
     });
   });
 
   describe('promise', () => {
-    it('builds the promise once', () => {
+    it('builds the promise once', async () => {
 
       const promise = resolver.promise();
 
-      expect(resolver.promise()).toBe(promise);
-      expect(resolver.promise()).toBe(promise);
-      expect(resolver.promise()).toBe(promise);
+      await expect(resolver.promise()).toBe(promise);
+      await expect(resolver.promise()).toBe(promise);
+      await expect(resolver.promise()).toBe(promise);
     });
   });
 

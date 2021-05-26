@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { hasOwnProperty } from './has-own-property';
 
 describe('hasOwnProperty', () => {

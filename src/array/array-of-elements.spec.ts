@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { arrayOfElements } from './array-of-elements';
 
 describe('arrayOfElements', () => {

@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { noop } from '../fn';
 import { isArrayLike } from './is-array-like';
 
