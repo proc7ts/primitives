@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { valueProvider, valuesCloner, valuesProvider } from './value-providers';
 
 describe('valueProvider', () => {

@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { areTheSame } from './are-the-same';
 
 describe('areEqual', () => {

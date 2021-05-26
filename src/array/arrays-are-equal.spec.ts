@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals';
 import { arraysAreEqual } from './arrays-are-equal';
 
 describe('arraysAreEqual', () => {
