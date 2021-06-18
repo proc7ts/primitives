@@ -62,7 +62,9 @@
 					<h1>Type And Function Primitives</h1>
 				</a>
 				<p><a href="https://www.npmjs.com/package/@proc7ts/primitives"><img src="https://img.shields.io/npm/v/@proc7ts/primitives.svg?logo=npm" alt="NPM"></a>
-					<a href="https://github.com/proc7ts/primitives/actions?query=workflow%3ABuild"><img src="https://github.com/proc7ts/primitives/workflows/Build/badge.svg" alt="Build Status"></a>
+					<a href="https://github.com/proc7ts/primitives/actions?query=workflow:Build"><img src="https://github.com/proc7ts/primitives/workflows/Build/badge.svg" alt="Build Status"></a>
+					<a href="https://www.codacy.com/gh/proc7ts/primitives/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=proc7ts/primitives&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/ddfc9695d4d64d08ae53a1d14c0a2b3b" alt="Code Quality"></a>
+					<a href="https://www.codacy.com/gh/proc7ts/primitives/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=proc7ts/primitives&amp;utm_campaign=Badge_Coverage"><img src="https://app.codacy.com/project/badge/Coverage/ddfc9695d4d64d08ae53a1d14c0a2b3b" alt="Coverage"></a>
 					<a href="https://github.com/proc7ts/primitives"><img src="https://img.shields.io/static/v1?logo=github&label=GitHub&message=project&color=informational" alt="GitHub Project"></a>
 				<a href="https://proc7ts.github.io/primitives/"><img src="https://img.shields.io/static/v1?logo=typescript&label=API&message=docs&color=informational" alt="API Documentation"></a></p>
 				<p>An assorted set of very basic types and utilities. See the <a href="https://proc7ts.github.io/primitives/">API documentation</a>.</p>
@@ -85,16 +87,22 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/abstractclass.html" class="tsd-kind-icon">Abstract<wbr>Class</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="interfaces/class.html" class="tsd-kind-icon">Class</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="interfaces/promiseresolver.html" class="tsd-kind-icon">Promise<wbr>Resolver</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="interfaces/propertyaccessordescriptor.html" class="tsd-kind-icon">Property<wbr>Accessor<wbr>Descriptor</a>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="modules.html#abstractconstructor" class="tsd-kind-icon">Abstract<wbr>Constructor</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
 						<a href="modules.html#asyncrecipe" class="tsd-kind-icon">Async<wbr>Recipe</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="modules.html#constructor" class="tsd-kind-icon">Constructor</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
 						<a href="modules.html#valuerecipe" class="tsd-kind-icon">Value<wbr>Recipe</a>
@@ -126,11 +134,8 @@
 					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="modules.html#extendsetofelements" class="tsd-kind-icon">extend<wbr>Set<wbr>OfElements</a>
 					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="modules.html#field2accessor" class="tsd-kind-icon">field2accessor</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="modules.html#fieldaccessordescriptor" class="tsd-kind-icon">field<wbr>Accessor<wbr>Descriptor</a>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#hasownproperty" class="tsd-kind-icon">has<wbr>Own<wbr>Property</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="modules.html#isarraylike" class="tsd-kind-icon">is<wbr>Array<wbr>Like</a>
@@ -149,9 +154,6 @@
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="modules.html#ispresent" class="tsd-kind-icon">is<wbr>Present</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="modules.html#ispropertyaccessordescriptor" class="tsd-kind-icon">is<wbr>Property<wbr>Accessor<wbr>Descriptor</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="modules.html#isundefined" class="tsd-kind-icon">is<wbr>Undefined</a>
@@ -178,9 +180,6 @@
 						<a href="modules.html#superclassof" class="tsd-kind-icon">super<wbr>Class<wbr>Of</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="modules.html#topropertyaccessordescriptor" class="tsd-kind-icon">to<wbr>Property<wbr>Accessor<wbr>Descriptor</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="modules.html#valuebyrecipe" class="tsd-kind-icon">value<wbr>ByRecipe</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
@@ -205,7 +204,6 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
