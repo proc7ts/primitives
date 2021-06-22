@@ -18,7 +18,7 @@ export function isPresent<T>(value: T | undefined | null): value is T {
  *
  * @returns `true` when the given `value` is `null` or `undefined`, or `false` otherwise.
  */
-export function isNotPresent<T>(value: T | undefined | null): value is T {
+export function isNotPresent<T>(value: T | undefined | null): value is undefined | null {
   return value == null;
 }
 
@@ -42,6 +42,6 @@ export function isDefined<T>(value: T | undefined): value is T {
  *
  * @returns `true` when the given `value` is `undefined`, or `false` otherwise.
  */
-export function isUndefined<T>(value: T | undefined): value is T {
+export function isUndefined<T>(value: T | undefined): value is undefined {
   return value === undefined;
 }
