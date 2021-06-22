@@ -29,4 +29,15 @@ describe('lazyValue', () => {
     provider.mockImplementation(lazy);
     expect(lazy).toThrow('Recurrent evaluation');
   });
+  it('re-evaluates the value after error thrown', () => {
+
+    const error = new Error();
+
+    provider.mockImplementation(() => { throw error; });
+    expect(lazy).toThrow(error);
+    expect(lazy).toThrow(error);
+
+    provider.mockImplementation(() => 'test');
+    expect(lazy()).toBe('test');
+  });
 });
