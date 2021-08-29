@@ -12,7 +12,7 @@ describe('hasOwnProperty', () => {
   });
   it('returns `false` when target property deleted', () => {
 
-    const object: { a?: string } = { a: 'test' };
+    const object: { a?: string | undefined } = { a: 'test' };
 
     delete object.a;
 

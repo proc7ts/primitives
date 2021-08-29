@@ -30,7 +30,7 @@ export interface PromiseResolver<T = void> {
    *
    * @param reason - Promise rejection reason.
    */
-  reject(this: void, reason?: any): void;
+  reject(this: void, reason?: unknown): void;
 
   /**
    * Creates a promise resolved by {@link resolve}, or rejected by {@link reject}.
@@ -51,7 +51,7 @@ export interface PromiseResolver<T = void> {
 export function newPromiseResolver<T = void>(): PromiseResolver<T> {
 
   let resolvePromise: (value: T | PromiseLike<T>) => void;
-  let rejectPromise: (reason?: any) => void;
+  let rejectPromise: (reason?: unknown) => void;
   let buildPromise = lazyValue(() => new Promise<T>((resolve, reject) => {
     resolvePromise = resolve;
     rejectPromise = reject;
