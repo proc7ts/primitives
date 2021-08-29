@@ -4,7 +4,7 @@ import { hasOwnProperty } from './has-own-property';
 describe('hasOwnProperty', () => {
   it('returns `true` when target object owns property', () => {
 
-    const object: { a?: string } = Object.create(null);
+    const object: { a?: string | undefined } = Object.create(null);
 
     object.a = undefined;
 
