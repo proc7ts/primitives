@@ -30,5 +30,6 @@ export function extendSetOfElements<T>(set: Set<T>, elements: T | readonly T[] |
   } else if (elements != null) {
     set.add(elements);
   }
+
   return set;
 }

@@ -14,7 +14,9 @@ describe('superClassOf', () => {
   it('finds super class', () => {
 
     class A {}
+
     class B extends A {}
+
     class C extends B {}
 
     expect(superClassOf(C)).toBe(B);
@@ -22,7 +24,9 @@ describe('superClassOf', () => {
   it('finds super class satisfying the given criteria', () => {
 
     class A {}
+
     class B extends A {}
+
     class C extends B {}
 
     expect(superClassOf(C, type => type.name === 'A')).toBe(A);

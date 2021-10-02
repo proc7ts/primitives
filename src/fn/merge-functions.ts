@@ -43,6 +43,7 @@ export function mergeFunctions<TArgs extends any[], TReturn, TThis>(
   if (!second) {
     return first;
   }
+
   return function (this: TThis, ...args: TArgs): TReturn {
     return merge(
         first.apply(this, args),
