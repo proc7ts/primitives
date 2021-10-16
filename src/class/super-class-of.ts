@@ -19,6 +19,7 @@ export function superClassOf(
     satisfying: (this: void, type: AbstractClass) => boolean = () => true,
 ): AbstractClass | undefined {
 
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   const prototype = Reflect.getPrototypeOf(type.prototype);
 
   if (prototype == null) {

@@ -19,7 +19,7 @@ describe('newPromiseResolver', () => {
       const promise = resolver.promise();
 
       expect(await promise).toBe('foo');
-      await expect(promise).toBe(resolver.promise());
+      expect(promise).toBe(resolver.promise());
     });
     it('resolves the promise after its construction', async () => {
 
@@ -29,7 +29,7 @@ describe('newPromiseResolver', () => {
       resolver.resolve('bar');
 
       expect(await promise).toBe('foo');
-      await expect(promise).toBe(resolver.promise());
+      expect(promise).toBe(resolver.promise());
     });
     it('resolves the promise by another one', async () => {
 
@@ -39,7 +39,7 @@ describe('newPromiseResolver', () => {
       resolver.resolve(Promise.resolve('bar'));
 
       expect(await promise).toBe('foo');
-      await expect(promise).toBe(resolver.promise());
+      expect(promise).toBe(resolver.promise());
     });
     it('resolves the void-value promise', async () => {
 
@@ -52,7 +52,7 @@ describe('newPromiseResolver', () => {
       const promise = voidResolver.promise();
 
       expect(await promise).toBeUndefined();
-      await expect(promise).toBe(voidResolver.promise());
+      expect(promise).toBe(voidResolver.promise());
     });
   });
 
@@ -73,7 +73,7 @@ describe('newPromiseResolver', () => {
       const promise = resolver.promise();
 
       expect(await promise.catch(asis)).toBe(error1);
-      await expect(promise).toBe(resolver.promise());
+      expect(promise).toBe(resolver.promise());
     });
     it('rejects the promise after its construction', async () => {
 
@@ -83,18 +83,18 @@ describe('newPromiseResolver', () => {
       resolver.reject(error2);
 
       expect(await promise.catch(asis)).toBe(error1);
-      await expect(promise).toBe(resolver.promise());
+      expect(promise).toBe(resolver.promise());
     });
   });
 
   describe('promise', () => {
-    it('builds the promise once', async () => {
+    it('builds the promise once', () => {
 
       const promise = resolver.promise();
 
-      await expect(resolver.promise()).toBe(promise);
-      await expect(resolver.promise()).toBe(promise);
-      await expect(resolver.promise()).toBe(promise);
+      expect(resolver.promise()).toBe(promise);
+      expect(resolver.promise()).toBe(promise);
+      expect(resolver.promise()).toBe(promise);
     });
   });
 
