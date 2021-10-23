@@ -23,11 +23,11 @@ describe('mergeFunctions', () => {
     expect(merged.apply(self, args)).toBe(3);
 
     expect(firstMock).toHaveBeenCalledTimes(1);
-    expect(firstMock).toHaveBeenCalledWith(...args);
+    expect(firstMock).toHaveBeenCalledWith(...args as [unknown, ...unknown[]]);
     expect(firstMock.mock.instances[0]).toBe(self);
 
     expect(secondMock).toHaveBeenCalledTimes(1);
-    expect(secondMock).toHaveBeenCalledWith(...args);
+    expect(secondMock).toHaveBeenCalledWith(...args as [unknown, ...unknown[]]);
     expect(secondMock.mock.instances[0]).toBe(self);
 
     expect(mergeMock).toHaveBeenCalledTimes(1);
@@ -42,11 +42,11 @@ describe('mergeFunctions', () => {
     expect(merged.apply(self, args)).toBe(2);
 
     expect(firstMock).toHaveBeenCalledTimes(1);
-    expect(firstMock).toHaveBeenCalledWith(...args);
+    expect(firstMock).toHaveBeenCalledWith(...args as [unknown, ...unknown[]]);
     expect(firstMock.mock.instances[0]).toBe(self);
 
     expect(secondMock).toHaveBeenCalledTimes(1);
-    expect(secondMock).toHaveBeenCalledWith(...args);
+    expect(secondMock).toHaveBeenCalledWith(...args as [unknown, ...unknown[]]);
     expect(secondMock.mock.instances[0]).toBe(self);
 
     expect(mergeMock).not.toHaveBeenCalled();
