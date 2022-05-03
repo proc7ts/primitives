@@ -4,7 +4,7 @@ import { lazyValue } from './lazy-value';
 
 describe('lazyValue', () => {
 
-  let provider: Mock<string>;
+  let provider: Mock<() => string>;
   let lazy: () => string;
 
   beforeEach(() => {

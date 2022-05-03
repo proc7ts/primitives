@@ -4,9 +4,9 @@ import { mergeFunctions } from './merge-functions';
 
 describe('mergeFunctions', () => {
 
-  let firstMock: Mock<number>;
-  let secondMock: Mock<number>;
-  let mergeMock: Mock<number>;
+  let firstMock: Mock<() => number>;
+  let secondMock: Mock<() => number>;
+  let mergeMock: Mock<() => number>;
 
   beforeEach(() => {
     firstMock = jest.fn(() => 1);
