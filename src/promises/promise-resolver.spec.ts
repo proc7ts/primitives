@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it } from '@jest/globals';
-import { asis } from '../fn';
-import type { PromiseResolver } from './promise-resolver';
-import { newPromiseResolver } from './promise-resolver';
+import { asis } from '../fn/mod.js';
+import type { PromiseResolver } from './promise-resolver.js';
+import { newPromiseResolver } from './promise-resolver.js';
 
 describe('newPromiseResolver', () => {
 

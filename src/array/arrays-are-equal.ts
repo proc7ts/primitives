@@ -1,4 +1,4 @@
-import { areTheSame } from '../value';
+import { areTheSame } from '../value/mod.js';
 
 /**
  * Checks whether two arrays are equal.

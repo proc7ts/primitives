@@ -1,4 +1,4 @@
-import type { AbstractClass } from './abstract-class';
+import type { AbstractClass } from './abstract-class.js';
 
 /**
  * Detects a super class of the given class optionally satisfying the given criteria.

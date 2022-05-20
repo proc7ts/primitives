@@ -1,4 +1,4 @@
-import { isArrayOfElements } from './array-of-elements';
+import { isArrayOfElements } from './array-of-elements.js';
 
 /**
  * Builds a set of the given element or array of elements.

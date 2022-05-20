@@ -1,5 +1,5 @@
 import { describe, expect, it } from '@jest/globals';
-import { countArgs } from './count-args';
+import { countArgs } from './count-args.js';
 
 describe('countArgs', () => {
 

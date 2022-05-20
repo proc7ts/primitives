@@ -1,5 +1,5 @@
 import { describe, expect, it } from '@jest/globals';
-import { hasOwnProperty } from './has-own-property';
+import { hasOwnProperty } from './has-own-property.js';
 
 describe('hasOwnProperty', () => {
   it('returns `true` when target object owns property', () => {

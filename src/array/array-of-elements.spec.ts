@@ -1,5 +1,5 @@
 import { describe, expect, it } from '@jest/globals';
-import { arrayOfElements } from './array-of-elements';
+import { arrayOfElements } from './array-of-elements.js';
 
 describe('arrayOfElements', () => {
   it('is empty when elements not specified', () => {

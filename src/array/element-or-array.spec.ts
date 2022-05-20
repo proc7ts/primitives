@@ -1,5 +1,5 @@
 import { describe, expect, it } from '@jest/globals';
-import { elementOrArray } from './element-or-array';
+import { elementOrArray } from './element-or-array.js';
 
 describe('elementOrArray', () => {
   it('is the only element', () => {

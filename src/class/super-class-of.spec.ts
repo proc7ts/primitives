@@ -1,5 +1,5 @@
 import { describe, expect, it } from '@jest/globals';
-import { superClassOf } from './super-class-of';
+import { superClassOf } from './super-class-of.js';
 
 describe('superClassOf', () => {
   it('finds the `Object` super class', () => {

@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from '@jest/globals';
-import { extendSetOfElements, setOfElements } from './set-of-elements';
+import { extendSetOfElements, setOfElements } from './set-of-elements.js';
 
 describe('setOfElements', () => {
   it('is empty when elements not specified', () => {

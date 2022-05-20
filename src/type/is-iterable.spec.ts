@@ -1,6 +1,6 @@
 import { describe, expect, it } from '@jest/globals';
-import { noop } from '../fn';
-import { isIterable } from './is-iterable';
+import { noop } from '../fn/mod.js';
+import { isIterable } from './is-iterable.js';
 
 describe('isIterable', () => {
   it('returns `true` for array', () => {

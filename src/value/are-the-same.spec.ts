@@ -1,5 +1,5 @@
 import { describe, expect, it } from '@jest/globals';
-import { areTheSame } from './are-the-same';
+import { areTheSame } from './are-the-same.js';
 
 describe('areEqual', () => {
   it('returns `true` for strictly equal values', () => {
