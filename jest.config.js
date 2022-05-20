@@ -4,7 +4,6 @@ export default {
   collectCoverageFrom: [
     'src/**/*.ts',
     '!src/**/*.spec.ts',
-    '!src/**/index.ts',
     '!**/node_modules/**',
   ],
   coverageDirectory: 'target/coverage',
@@ -17,6 +16,9 @@ export default {
     },
   },
   extensionsToTreatAsEsm: ['.ts'],
+  moduleNameMapper: {
+    '^(\\.{1,2}/.*)\\.js$': '$1',
+  },
   reporters: [
     'default',
     [

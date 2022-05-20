@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, jest } from '@jest/globals';
 import type { Mock } from 'jest-mock';
-import { mergeFunctions } from './merge-functions';
+import { mergeFunctions } from './merge-functions.js';
 
 describe('mergeFunctions', () => {
 

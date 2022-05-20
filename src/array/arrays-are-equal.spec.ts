@@ -1,5 +1,5 @@
 import { describe, expect, it } from '@jest/globals';
-import { arraysAreEqual } from './arrays-are-equal';
+import { arraysAreEqual } from './arrays-are-equal.js';
 
 describe('arraysAreEqual', () => {
   it('returns `true` for empty arrays', () => {

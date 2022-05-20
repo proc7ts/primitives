@@ -1,6 +1,6 @@
 import { describe, expect, it } from '@jest/globals';
-import { noop } from '../fn';
-import { isArrayLike } from './is-array-like';
+import { noop } from '../fn/mod.js';
+import { isArrayLike } from './is-array-like.js';
 
 describe('isArrayLike', () => {
   it('returns `true` for empty array', () => {

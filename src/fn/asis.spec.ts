@@ -1,5 +1,5 @@
 import { describe, expect, it } from '@jest/globals';
-import { asis } from './asis';
+import { asis } from './asis.js';
 
 describe('asis', () => {
   it('returns its argument', () => {

@@ -1,5 +1,5 @@
 import { describe, expect, it } from '@jest/globals';
-import { propertiesAreEqual } from './properties-are-equal';
+import { propertiesAreEqual } from './properties-are-equal.js';
 
 describe('propertiesAreEqual', () => {
   it('returns `true` for equal objects', () => {

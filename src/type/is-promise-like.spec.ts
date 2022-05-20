@@ -1,6 +1,6 @@
 import { describe, expect, it } from '@jest/globals';
-import { noop } from '../fn';
-import { isPromiseLike } from './is-promise-like';
+import { noop } from '../fn/mod.js';
+import { isPromiseLike } from './is-promise-like.js';
 
 describe('isPromiseLike', () => {
   it('succeeds for promise', () => {

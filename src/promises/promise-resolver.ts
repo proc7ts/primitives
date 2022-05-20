@@ -1,5 +1,5 @@
-import { noop } from '../fn';
-import { lazyValue } from '../value';
+import { noop } from '../fn/mod.js';
+import { lazyValue } from '../value/mod.js';
 
 /**
  * A resolver of promise that can be created later or not created at all.
