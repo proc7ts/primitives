@@ -3,9 +3,7 @@
   "version": "4.0.0-pre.0",
   "description": "Type and function primitives",
   "keywords": [
-    "primitives",
-    "function",
-    "typescript"
+    "primitives"
   ],
   "homepage": "https://github.com/proc7ts/primitives",
   "repository": {
