@@ -5,7 +5,7 @@ import { isArrayOfElements } from './array-of-elements.js';
  *
  * @param elements Either element, readonly array of elements, `null`, or `undefined`.
  *
- * @returns A new set containing all of the given elements, or empty set if `elements` is `null` or `undefined`.
+ * @returns A new set containing all the given elements, or empty set if `elements` is `null` or `undefined`.
  */
 export function setOfElements<T>(elements: T | readonly T[] | null | undefined): Set<T> {
   return (/*#__INLINE__*/ isArrayOfElements(elements))
