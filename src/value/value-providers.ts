@@ -21,16 +21,3 @@ export function valueProvider<T>(value: T): (this: void) => T {
 export function valuesProvider<T extends readonly any[]>(...values: T): (this: void) => T {
   return (): T => values;
 }
-
-/**
- * Creates a provider of cloned arguments tuple.
- *
- * The returned tuple can be modified as it is cloned before the return.
- *
- * @param values - Values to return.
- *
- * @returns A function that returns a clone of `values` tuple.
- */
-export function valuesCloner<T extends any[]>(...values: T): (this: void) => T {
-  return (): T => values.slice() as T;
-}
