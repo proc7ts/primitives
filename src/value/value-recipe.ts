@@ -1,4 +1,4 @@
-import { valueProvider } from './value-providers.js';
+import { valueProvider } from './value-provider.js';
 
 /**
  * A recipe of value evaluation.

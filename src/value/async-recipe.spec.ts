@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, jest } from '@jest/globals';
 import { asyncByRecipe, asyncRecipe, AsyncRecipe } from './async-recipe.js';
-import { valueProvider } from './value-providers.js';
+import { valueProvider } from './value-provider.js';
 
 describe('asyncByRecipe', () => {
 
