@@ -16,7 +16,7 @@ describe('countArgs', () => {
     expect(argCount()).toBe(0);
   });
 
-  function argCount(...args: any[]): number {
+  function argCount(...args: unknown[]): number {
     return countArgs(args);
   }
 

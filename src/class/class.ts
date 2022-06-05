@@ -3,16 +3,16 @@
  *
  * @typeParam T - Constructed instance type.
  */
-export type Constructor<T = any> = new(...args: any[]) => T;
+export type Constructor<out T extends object = object> = new(...args: unknown[]) => T;
 
 /**
  * Arbitrary class constructor.
  *
  * @typeParam T - A type of class instance.
  */
-export interface Class<T extends object = any> extends Constructor {
+export interface Class<out T extends object = object> extends Constructor {
 
-  new(...args: any[]): T;
+  new(...args: unknown[]): T;
 
   prototype: T;
 

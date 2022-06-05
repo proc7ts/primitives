@@ -16,18 +16,18 @@ describe('mergeFunctions', () => {
 
   it('merges function results', () => {
 
-    const merged: (...args: any[]) => any = mergeFunctions(firstMock, secondMock, mergeMock);
+    const merged: (...args: unknown[]) => number = mergeFunctions(firstMock, secondMock, mergeMock);
     const self = { name: 'this' };
     const args = ['foo', 'bar'];
 
     expect(merged.apply(self, args)).toBe(3);
 
     expect(firstMock).toHaveBeenCalledTimes(1);
-    expect(firstMock).toHaveBeenCalledWith(...args as [unknown, ...unknown[]]);
+    expect(firstMock).toHaveBeenCalledWith(...args);
     expect(firstMock.mock.instances[0]).toBe(self);
 
     expect(secondMock).toHaveBeenCalledTimes(1);
-    expect(secondMock).toHaveBeenCalledWith(...args as [unknown, ...unknown[]]);
+    expect(secondMock).toHaveBeenCalledWith(...args);
     expect(secondMock.mock.instances[0]).toBe(self);
 
     expect(mergeMock).toHaveBeenCalledTimes(1);
@@ -35,18 +35,18 @@ describe('mergeFunctions', () => {
   });
   it('returns the second function result by default', () => {
 
-    const merged: (...args: any[]) => any = mergeFunctions(firstMock, secondMock);
+    const merged: (...args: unknown[]) => number = mergeFunctions(firstMock, secondMock);
     const self = { name: 'this' };
     const args = ['foo', 'bar'];
 
     expect(merged.apply(self, args)).toBe(2);
 
     expect(firstMock).toHaveBeenCalledTimes(1);
-    expect(firstMock).toHaveBeenCalledWith(...args as [unknown, ...unknown[]]);
+    expect(firstMock).toHaveBeenCalledWith(...args);
     expect(firstMock.mock.instances[0]).toBe(self);
 
     expect(secondMock).toHaveBeenCalledTimes(1);
-    expect(secondMock).toHaveBeenCalledWith(...args as [unknown, ...unknown[]]);
+    expect(secondMock).toHaveBeenCalledWith(...args);
     expect(secondMock.mock.instances[0]).toBe(self);
 
     expect(mergeMock).not.toHaveBeenCalled();

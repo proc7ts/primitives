@@ -3,7 +3,7 @@
  *
  * @typeParam T - Constructed instance type.
  */
-export type AbstractConstructor<T = any> = abstract new(...args: any[]) => T;
+export type AbstractConstructor<out T extends object = object> = abstract new(...args: unknown[]) => T;
 
 
 /**
@@ -11,7 +11,7 @@ export type AbstractConstructor<T = any> = abstract new(...args: any[]) => T;
  *
  * @typeParam T - A type of class instance.
  */
-export interface AbstractClass<T extends object = any> extends AbstractConstructor<T> {
+export interface AbstractClass<out T extends object = object> extends AbstractConstructor<T> {
 
   prototype: T;
 

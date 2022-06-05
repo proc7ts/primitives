@@ -7,7 +7,7 @@
  * @typeParam TValue - Evaluated value type. This can not be a function.
  * @typeParam TArgs - A type of parameters tuple required for value evaluation.
  */
-export type AsyncRecipe<TValue, TArgs extends any[] = []> =
+export type AsyncRecipe<TValue, TArgs extends unknown[] = []> =
     | TValue
     | PromiseLike<TValue>
     | AsyncRecipe.Evaluator<TValue, TArgs>;
@@ -19,13 +19,11 @@ export namespace AsyncRecipe {
    *
    * @typeParam TValue - Evaluated value type. This can not be a function.
    * @typeParam TArgs - A type of parameters tuple required for value evaluation.
-   */
-  export type Evaluator<TValue, TArgs extends any[] = []> =
-  /**
    * @param args - Parameters required for value evaluation.
    *
    * @returns Either an valuated value, or a promise-like instance resolving to one.
    */
+  export type Evaluator<out TValue, in TArgs extends unknown[] = []> =
       (this: void, ...args: TArgs) => TValue | PromiseLike<TValue>;
 
 }
@@ -33,7 +31,7 @@ export namespace AsyncRecipe {
 /**
  * @internal
  */
-function isAsyncEvaluator<TValue, TArgs extends any[]>(
+function isAsyncEvaluator<TValue, TArgs extends unknown[]>(
     value: AsyncRecipe<TValue, TArgs>,
 ): value is AsyncRecipe.Evaluator<TValue, TArgs> {
   return typeof value === 'function';
@@ -49,7 +47,7 @@ function isAsyncEvaluator<TValue, TArgs extends any[]>(
  *
  * @returns A promise resolved to the value.
  */
-export async function asyncByRecipe<TValue, TArgs extends any[]>(
+export async function asyncByRecipe<TValue, TArgs extends unknown[]>(
     recipe: AsyncRecipe<TValue, TArgs>,
     ...args: TArgs
 ): Promise<TValue> {
@@ -65,7 +63,7 @@ export async function asyncByRecipe<TValue, TArgs extends any[]>(
  *
  * @returns A function asynchronously evaluating the value.
  */
-export function asyncRecipe<TValue, TArgs extends any[]>(
+export function asyncRecipe<TValue, TArgs extends unknown[]>(
     recipe: AsyncRecipe<TValue, TArgs>,
 ): (this: void, ...args: TArgs) => Promise<TValue> {
   return (/*#__INLINE__*/ isAsyncEvaluator(recipe))

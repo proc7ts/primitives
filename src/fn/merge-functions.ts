@@ -14,25 +14,25 @@
  * @return A function that calls both of the given ones and merges their results. If one of the functions is absent,
  * then just returns another one. If both are absent, then returns `undefined`.
  */
-export function mergeFunctions<TArgs extends any[], TReturn, TThis>(
+export function mergeFunctions<TArgs extends unknown[], TReturn, TThis>(
     first: (this: TThis, ...args: TArgs) => TReturn,
     second: ((this: TThis, ...args: TArgs) => TReturn) | undefined,
     merge: (first: TReturn, second: TReturn) => TReturn,
 ): (this: TThis, ...args: TArgs) => TReturn;
 
-export function mergeFunctions<TArgs extends any[], TReturn, TThis>(
+export function mergeFunctions<TArgs extends unknown[], TReturn, TThis>(
     first: ((this: TThis, ...args: TArgs) => TReturn) | undefined,
     second: (this: TThis, ...args: TArgs) => TReturn,
     merge?: (first: TReturn, second: TReturn) => TReturn,
 ): (this: TThis, ...args: TArgs) => TReturn;
 
-export function mergeFunctions<TArgs extends any[], TReturn, TThis>(
+export function mergeFunctions<TArgs extends unknown[], TReturn, TThis>(
     first: ((this: TThis, ...args: TArgs) => TReturn) | undefined,
     second: ((this: TThis, ...args: TArgs) => TReturn) | undefined,
     merge?: (first: TReturn, second: TReturn) => TReturn,
 ): ((this: TThis, ...args: TArgs) => TReturn) | undefined;
 
-export function mergeFunctions<TArgs extends any[], TReturn, TThis>(
+export function mergeFunctions<TArgs extends unknown[], TReturn, TThis>(
     first: ((this: TThis, ...args: TArgs) => TReturn) | undefined,
     second: ((this: TThis, ...args: TArgs) => TReturn) | undefined,
     merge: (first: TReturn, second: TReturn) => TReturn = (_f, s) => s,
