@@ -1,3 +1,5 @@
+import { mayHaveProperties } from '../object/may-have-properties.js';
+
 /**
  * Checks if the given object is a promise-like instance.
  *
@@ -10,7 +12,6 @@
 export function isPromiseLike<TResolved, TOther>(
     value: PromiseLike<TResolved> | TOther,
 ): value is PromiseLike<TResolved> {
-  return !!value
-      && (typeof value === 'object' || typeof value === 'function')
+  return (/*#__INLINE__*/ mayHaveProperties(value))
       && typeof (value as Partial<PromiseLike<TResolved>>).then === 'function';
 }
