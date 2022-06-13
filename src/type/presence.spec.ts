@@ -1,5 +1,5 @@
 import { describe, expect, it } from '@jest/globals';
-import { isDefined, isNotPresent, isPresent, isUndefined } from './presence.js';
+import { isDefined, isNotNull, isNotPresent, isNull, isPresent, isUndefined } from './presence.js';
 
 describe('isPresent', () => {
   it('returns `false` on `null`', () => {
@@ -46,5 +46,29 @@ describe('isUndefined', () => {
   });
   it('returns `false` otherwise', () => {
     expect(isUndefined(0)).toBe(false);
+  });
+});
+
+describe('isNotNull', () => {
+  it('returns `false` on `null`', () => {
+    expect(isNotNull(null)).toBe(false);
+  });
+  it('returns `true` on `undefined`', () => {
+    expect(isNotNull(undefined)).toBe(true);
+  });
+  it('returns `true` otherwise', () => {
+    expect(isNotNull(0)).toBe(true);
+  });
+});
+
+describe('isNull', () => {
+  it('returns `true` on `null`', () => {
+    expect(isNull(null)).toBe(true);
+  });
+  it('returns `false` on `undefined`', () => {
+    expect(isNull(undefined)).toBe(false);
+  });
+  it('returns `false` otherwise', () => {
+    expect(isNull(0)).toBe(false);
   });
 });
