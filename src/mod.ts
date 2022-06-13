@@ -4,6 +4,7 @@
  */
 export * from './array/mod.js';
 export * from './class/mod.js';
+export * from './collection/mod.js';
 export * from './fn/mod.js';
 export * from './object/mod.js';
 export * from './value/mod.js';
