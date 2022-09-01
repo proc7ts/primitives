@@ -12,7 +12,9 @@ describe('isIterable', () => {
   it('returns `true` for iterable function', () => {
     const value = (() => void 0) as Partial<Iterable<number>>;
 
-    value[Symbol.iterator] = function *() { yield* [1, 2, 3]; };
+    value[Symbol.iterator] = function *() {
+      yield* [1, 2, 3];
+    };
 
     expect(isIterable(value)).toBe(true);
   });

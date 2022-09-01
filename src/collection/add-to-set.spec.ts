@@ -2,7 +2,6 @@ import { beforeEach, describe, expect, it } from '@jest/globals';
 import { addToSet } from './add-to-set.js';
 
 describe('addToSet', () => {
-
   let set: Set<number>;
 
   beforeEach(() => {

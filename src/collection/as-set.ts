@@ -9,11 +9,11 @@ import { isIterable } from '../type/is-iterable.js';
  * @returns A new set containing all the given elements, or empty set if `elements` is `null` or `undefined`.
  */
 export function asSet<TElement>(
-    elements: TElement | Iterable<TElement> | null | undefined,
+  elements: TElement | Iterable<TElement> | null | undefined,
 ): Set<TElement> {
-  return (/*#__INLINE__*/ isIterable(elements))
-      ? new Set(elements)
-      : elements == null
-          ? new Set()
-          : new Set<TElement>().add(elements);
+  return /*#__INLINE__*/ isIterable(elements)
+    ? new Set(elements)
+    : elements == null
+    ? new Set()
+    : new Set<TElement>().add(elements);
 }

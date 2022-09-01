@@ -6,14 +6,12 @@ describe('asSet', () => {
     expect(asSet(null).size).toBe(0);
   });
   it('contains the only element', () => {
-
     const set = asSet(1);
 
     expect(set.size).toBe(1);
     expect(set).toContain(1);
   });
   it('contains all elements', () => {
-
     const set = asSet([1, 2, 3]);
 
     expect(set.size).toBe(3);

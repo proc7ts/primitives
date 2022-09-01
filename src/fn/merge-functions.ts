@@ -15,27 +15,27 @@
  * then just returns another one. If both are absent, then returns `undefined`.
  */
 export function mergeFunctions<TArgs extends unknown[], TReturn, TThis>(
-    first: (this: TThis, ...args: TArgs) => TReturn,
-    second: ((this: TThis, ...args: TArgs) => TReturn) | undefined,
-    merge: (first: TReturn, second: TReturn) => TReturn,
+  first: (this: TThis, ...args: TArgs) => TReturn,
+  second: ((this: TThis, ...args: TArgs) => TReturn) | undefined,
+  merge: (first: TReturn, second: TReturn) => TReturn,
 ): (this: TThis, ...args: TArgs) => TReturn;
 
 export function mergeFunctions<TArgs extends unknown[], TReturn, TThis>(
-    first: ((this: TThis, ...args: TArgs) => TReturn) | undefined,
-    second: (this: TThis, ...args: TArgs) => TReturn,
-    merge?: (first: TReturn, second: TReturn) => TReturn,
+  first: ((this: TThis, ...args: TArgs) => TReturn) | undefined,
+  second: (this: TThis, ...args: TArgs) => TReturn,
+  merge?: (first: TReturn, second: TReturn) => TReturn,
 ): (this: TThis, ...args: TArgs) => TReturn;
 
 export function mergeFunctions<TArgs extends unknown[], TReturn, TThis>(
-    first: ((this: TThis, ...args: TArgs) => TReturn) | undefined,
-    second: ((this: TThis, ...args: TArgs) => TReturn) | undefined,
-    merge?: (first: TReturn, second: TReturn) => TReturn,
+  first: ((this: TThis, ...args: TArgs) => TReturn) | undefined,
+  second: ((this: TThis, ...args: TArgs) => TReturn) | undefined,
+  merge?: (first: TReturn, second: TReturn) => TReturn,
 ): ((this: TThis, ...args: TArgs) => TReturn) | undefined;
 
 export function mergeFunctions<TArgs extends unknown[], TReturn, TThis>(
-    first: ((this: TThis, ...args: TArgs) => TReturn) | undefined,
-    second: ((this: TThis, ...args: TArgs) => TReturn) | undefined,
-    merge: (first: TReturn, second: TReturn) => TReturn = (_f, s) => s,
+  first: ((this: TThis, ...args: TArgs) => TReturn) | undefined,
+  second: ((this: TThis, ...args: TArgs) => TReturn) | undefined,
+  merge: (first: TReturn, second: TReturn) => TReturn = (_f, s) => s,
 ): ((this: TThis, ...args: TArgs) => TReturn) | undefined {
   if (!first) {
     return second;
@@ -45,9 +45,6 @@ export function mergeFunctions<TArgs extends unknown[], TReturn, TThis>(
   }
 
   return function (this: TThis, ...args: TArgs): TReturn {
-    return merge(
-        first.apply(this, args),
-        second.apply(this, args),
-    );
+    return merge(first.apply(this, args), second.apply(this, args));
   };
 }

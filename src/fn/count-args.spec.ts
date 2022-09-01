@@ -2,7 +2,6 @@ import { describe, expect, it } from '@jest/globals';
 import { countArgs } from './count-args.js';
 
 describe('countArgs', () => {
-
   it('counts defined args', () => {
     expect(argCount(undefined, 1, undefined, null)).toBe(4);
   });
@@ -19,5 +18,4 @@ describe('countArgs', () => {
   function argCount(...args: unknown[]): number {
     return countArgs(args);
   }
-
 });

@@ -7,7 +7,9 @@
  *
  * @returns `true` if the given `value` is an array, or `false` otherwise.
  */
-export function isArray<TElement, TOther = unknown>(value: TElement[] | TOther): value is TElement[];
+export function isArray<TElement, TOther = unknown>(
+  value: TElement[] | TOther,
+): value is TElement[];
 
 /**
  * Checks whether the given value is a readonly array.
@@ -18,8 +20,12 @@ export function isArray<TElement, TOther = unknown>(value: TElement[] | TOther):
  *
  * @returns `true` if the given `value` is an array, or `false` otherwise.
  */
-export function isArray<TElement, TOther = unknown>(value: readonly TElement[] | TOther): value is readonly TElement[];
+export function isArray<TElement, TOther = unknown>(
+  value: readonly TElement[] | TOther,
+): value is readonly TElement[];
 
-export function isArray<TElement, TOther>(value: TElement[] | readonly TElement[] | TOther): value is TElement[] {
+export function isArray<TElement, TOther>(
+  value: TElement[] | readonly TElement[] | TOther,
+): value is TElement[] {
   return Array.isArray(value);
 }

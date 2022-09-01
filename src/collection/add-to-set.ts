@@ -13,8 +13,8 @@ import { isIterable } from '../type/is-iterable.js';
  * @returns The target `set`.
  */
 export function addToSet<TElement>(
-    set: Set<TElement>,
-    elements: TElement | Iterable<TElement> | null | undefined,
+  set: Set<TElement>,
+  elements: TElement | Iterable<TElement> | null | undefined,
 ): Set<TElement> {
   if (/*#__INLINE__*/ isIterable(elements)) {
     for (const element of elements) {

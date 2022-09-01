@@ -3,7 +3,6 @@ import type { Mock } from 'jest-mock';
 import { lazyValue } from './lazy-value.js';
 
 describe('lazyValue', () => {
-
   let provider: Mock<() => string>;
   let lazy: () => string;
 
@@ -30,10 +29,11 @@ describe('lazyValue', () => {
     expect(lazy).toThrow('Recurrent evaluation');
   });
   it('re-evaluates the value after error thrown', () => {
-
     const error = new Error();
 
-    provider.mockImplementation(() => { throw error; });
+    provider.mockImplementation(() => {
+      throw error;
+    });
     expect(lazy).toThrow(error);
     expect(lazy).toThrow(error);
 

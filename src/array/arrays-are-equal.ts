@@ -11,9 +11,9 @@ import { areTheSame } from '../value/mod.js';
  * @returns `true` if up to `length` corresponding array elements are strictly equal to each other.
  */
 export function arraysAreEqual<TElement>(
-    first: ArrayLike<TElement>,
-    second: ArrayLike<TElement>,
-    length?: number | null,
+  first: ArrayLike<TElement>,
+  second: ArrayLike<TElement>,
+  length?: number | null,
 ): boolean;
 
 /**
@@ -28,10 +28,10 @@ export function arraysAreEqual<TElement>(
  * @returns `true` if all corresponding elements in corresponding array ranges are strictly equal to each other.
  */
 export function arraysAreEqual<TElement>(
-    first: ArrayLike<TElement>,
-    second: ArrayLike<TElement>,
-    from: number | null | undefined,
-    to: number | null,
+  first: ArrayLike<TElement>,
+  second: ArrayLike<TElement>,
+  from: number | null | undefined,
+  to: number | null,
 ): boolean;
 
 /**
@@ -48,10 +48,10 @@ export function arraysAreEqual<TElement>(
  * pairs.
  */
 export function arraysAreEqual<TElement>(
-    first: ArrayLike<TElement>,
-    second: ArrayLike<TElement>,
-    elementsAreEqual: (this: void, first: TElement, second: TElement, index: number) => boolean,
-    length?: number | null,
+  first: ArrayLike<TElement>,
+  second: ArrayLike<TElement>,
+  elementsAreEqual: (this: void, first: TElement, second: TElement, index: number) => boolean,
+  length?: number | null,
 ): boolean;
 
 /**
@@ -69,45 +69,35 @@ export function arraysAreEqual<TElement>(
  * pairs.
  */
 export function arraysAreEqual<TElement>(
-    first: ArrayLike<TElement>,
-    second: ArrayLike<TElement>,
-    elementsAreEqual: (this: void, first: TElement, second: TElement, index: number) => boolean,
-    from: number | null | undefined,
-    to: number | null,
+  first: ArrayLike<TElement>,
+  second: ArrayLike<TElement>,
+  elementsAreEqual: (this: void, first: TElement, second: TElement, index: number) => boolean,
+  from: number | null | undefined,
+  to: number | null,
 ): boolean;
 
 export function arraysAreEqual<TElement>(
-    first: ArrayLike<TElement>,
-    second: ArrayLike<TElement>,
-    compareOrFromOrLength?: ((this: void, first: TElement, second: TElement, index: number) => boolean) | number | null,
-    fromOrLength?: number | null,
-    to?: number | null,
+  first: ArrayLike<TElement>,
+  second: ArrayLike<TElement>,
+  compareOrFromOrLength?:
+    | ((this: void, first: TElement, second: TElement, index: number) => boolean)
+    | number
+    | null,
+  fromOrLength?: number | null,
+  to?: number | null,
 ): boolean {
   return typeof compareOrFromOrLength === 'function'
-      ? arrayElementsAreEqual(
-          first,
-          second,
-          compareOrFromOrLength,
-          fromOrLength,
-          to,
-      )
-      : arrayElementsAreEqual(
-          first,
-          second,
-          areTheSame,
-          compareOrFromOrLength,
-          fromOrLength,
-      );
+    ? arrayElementsAreEqual(first, second, compareOrFromOrLength, fromOrLength, to)
+    : arrayElementsAreEqual(first, second, areTheSame, compareOrFromOrLength, fromOrLength);
 }
 
 function arrayElementsAreEqual<TElement>(
-    first: ArrayLike<TElement>,
-    second: ArrayLike<TElement>,
-    elementsAreEqual: (this: void, first: TElement, second: TElement, index: number) => boolean,
-    fromOrLength?: number | null,
-    to?: number | null,
+  first: ArrayLike<TElement>,
+  second: ArrayLike<TElement>,
+  elementsAreEqual: (this: void, first: TElement, second: TElement, index: number) => boolean,
+  fromOrLength?: number | null,
+  to?: number | null,
 ): boolean {
-
   let start: number;
   let end: number;
 

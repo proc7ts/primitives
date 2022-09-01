@@ -11,13 +11,11 @@ import { valueProvider } from './value-provider.js';
  * @returns A function that returns the value evaluated by `provider`.
  */
 export function lazyValue<T>(provider: (this: void) => T): (this: void) => T {
-
   let get: () => T;
 
   const getValue = (): T => {
     get = lazyValue$recurrent; // Prevent recurrent evaluation
     try {
-
       const value = provider();
 
       get = valueProvider(value);

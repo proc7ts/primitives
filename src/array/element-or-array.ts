@@ -7,7 +7,6 @@
  * `source` is empty.
  */
 export function elementOrArray<T>(source: Iterable<T> | ArrayLike<T>): T | T[] | undefined {
-
   const array = Array.from(source);
   const { length } = array;
 

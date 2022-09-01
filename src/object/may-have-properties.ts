@@ -6,5 +6,5 @@
  * @returns `true` if the `value` is either a non-null object or function, or `false` otherwise.
  */
 export function mayHaveProperties(value: unknown): value is object {
-  return typeof value === 'object' && !!value || typeof value === 'function';
+  return (typeof value === 'object' && !!value) || typeof value === 'function';
 }

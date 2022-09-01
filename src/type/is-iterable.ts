@@ -10,8 +10,10 @@ import { mayHaveProperties } from '../object/may-have-properties.js';
  * @returns `true` if the `value` has a `[Symbol.iterator]` method, or `false` otherwise.
  */
 export function isIterable<TElement, TOther = unknown>(
-    value: Iterable<TElement> | TOther,
+  value: Iterable<TElement> | TOther,
 ): value is Iterable<TElement> {
-  return (/*#__INLINE__*/ mayHaveProperties(value))
-      && typeof (value as Partial<Iterable<TElement>>)[Symbol.iterator] === 'function';
+  return (
+    /*#__INLINE__*/ mayHaveProperties(value)
+    && typeof (value as Partial<Iterable<TElement>>)[Symbol.iterator] === 'function'
+  );
 }

@@ -7,7 +7,6 @@ describe('isPromiseLike', () => {
     expect(isPromiseLike(Promise.resolve())).toBe(true);
   });
   it('succeeds for then-able function', () => {
-
     const thenable: (() => undefined) & PromiseLike<void> = () => void 0;
 
     thenable.then = (ok, fail) => Promise.resolve().then(ok, fail);

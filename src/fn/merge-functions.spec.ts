@@ -3,7 +3,6 @@ import type { Mock } from 'jest-mock';
 import { mergeFunctions } from './merge-functions.js';
 
 describe('mergeFunctions', () => {
-
   let firstMock: Mock<() => number>;
   let secondMock: Mock<() => number>;
   let mergeMock: Mock<() => number>;
@@ -15,7 +14,6 @@ describe('mergeFunctions', () => {
   });
 
   it('merges function results', () => {
-
     const merged: (...args: unknown[]) => number = mergeFunctions(firstMock, secondMock, mergeMock);
     const self = { name: 'this' };
     const args = ['foo', 'bar'];
@@ -34,7 +32,6 @@ describe('mergeFunctions', () => {
     expect(mergeMock).toHaveBeenCalledWith(1, 2);
   });
   it('returns the second function result by default', () => {
-
     const merged: (...args: unknown[]) => number = mergeFunctions(firstMock, secondMock);
     const self = { name: 'this' };
     const args = ['foo', 'bar'];

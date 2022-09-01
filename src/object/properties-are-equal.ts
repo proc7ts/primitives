@@ -14,25 +14,33 @@ import { areTheSame } from '../value/mod.js';
  *
  * @returns `true` if `valuesAreEqual` returned `true` for each property key, or `false` otherwise.
  */
-export function propertiesAreEqual<TObject extends object, TKey extends keyof TObject = keyof TObject>(
-    first: TObject,
-    second: TObject,
-    valuesAreEqual?: (<TPropertyKey extends TKey>(
+export function propertiesAreEqual<
+  TObject extends object,
+  TKey extends keyof TObject = keyof TObject,
+>(
+  first: TObject,
+  second: TObject,
+  valuesAreEqual?:
+    | (<TPropertyKey extends TKey>(
         this: void,
         first: TObject[TPropertyKey],
         second: TObject[TPropertyKey],
         key: TPropertyKey,
-    ) => boolean) | null,
-    keys:
-        | Iterable<TKey>
-        | ((this: void, first: TObject, second: TObject) => Iterable<TKey>) = propertiesAreEqual$ownKeys,
+      ) => boolean)
+    | null,
+  keys:
+    | Iterable<TKey>
+    | ((
+        this: void,
+        first: TObject,
+        second: TObject,
+      ) => Iterable<TKey>) = propertiesAreEqual$ownKeys,
 ): boolean {
   valuesAreEqual ||= areTheSame;
 
   const keyList = typeof keys === 'function' ? keys(first, second) : keys;
 
   for (const key of keyList) {
-
     const value1 = first[key];
     const value2 = second[key];
 
@@ -45,10 +53,9 @@ export function propertiesAreEqual<TObject extends object, TKey extends keyof TO
 }
 
 function *propertiesAreEqual$ownKeys<TObject extends object, TKey extends keyof TObject>(
-    first: TObject,
-    second: TObject,
+  first: TObject,
+  second: TObject,
 ): Iterable<TKey> {
-
   const keys = new Set<PropertyKey>();
 
   for (const key of Reflect.ownKeys(first)) {

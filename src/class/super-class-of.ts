@@ -15,10 +15,9 @@ import type { AbstractClass } from './abstract-class.js';
  * super class at all (e.g. when `Object` is passed in).
  */
 export function superClassOf(
-    type: AbstractClass,
-    satisfying: (this: void, type: AbstractClass) => boolean = () => true,
+  type: AbstractClass,
+  satisfying: (this: void, type: AbstractClass) => boolean = () => true,
 ): AbstractClass | undefined {
-
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   const prototype = Reflect.getPrototypeOf(type.prototype);
 
