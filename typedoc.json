@@ -2,5 +2,8 @@
   "entryPoints": ["src/mod.ts"],
   "excludePrivate": true,
   "name": "Primitives",
-  "out": "./target/typedoc"
+  "out": "./target/typedoc",
+  "compilerOptions": {
+    "module": 7 /* ES2022 */
+  }
 }
