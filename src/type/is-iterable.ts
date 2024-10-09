@@ -13,7 +13,7 @@ export function isIterable<TElement, TOther = unknown>(
   value: Iterable<TElement> | TOther,
 ): value is Iterable<TElement> {
   return (
-    /*#__INLINE__*/ mayHaveProperties(value)
-    && typeof (value as Partial<Iterable<TElement>>)[Symbol.iterator] === 'function'
+    /*#__INLINE__*/ mayHaveProperties(value) &&
+    typeof (value as Partial<Iterable<TElement>>)[Symbol.iterator] === 'function'
   );
 }

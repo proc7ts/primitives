@@ -1,9 +1,8 @@
 import { beforeEach, describe, expect, it, jest } from '@jest/globals';
-import type { Mock } from 'jest-mock';
 import { lazyValue } from './lazy-value.js';
 
 describe('lazyValue', () => {
-  let provider: Mock<() => string>;
+  let provider: jest.Mock<() => string>;
   let lazy: () => string;
 
   beforeEach(() => {

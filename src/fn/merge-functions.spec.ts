@@ -1,11 +1,10 @@
 import { beforeEach, describe, expect, it, jest } from '@jest/globals';
-import { Mock } from 'jest-mock';
 import { mergeFunctions } from './merge-functions.js';
 
 describe('mergeFunctions', () => {
-  let firstMock: Mock<(...args: unknown[]) => number>;
-  let secondMock: Mock<(...args: unknown[]) => number>;
-  let mergeMock: Mock<(...args: unknown[]) => number>;
+  let firstMock: jest.Mock<(...args: unknown[]) => number>;
+  let secondMock: jest.Mock<(...args: unknown[]) => number>;
+  let mergeMock: jest.Mock<(...args: unknown[]) => number>;
 
   beforeEach(() => {
     firstMock = jest.fn(() => 1);

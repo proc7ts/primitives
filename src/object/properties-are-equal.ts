@@ -52,7 +52,7 @@ export function propertiesAreEqual<
   return true;
 }
 
-function *propertiesAreEqual$ownKeys<TObject extends object, TKey extends keyof TObject>(
+function* propertiesAreEqual$ownKeys<TObject extends object, TKey extends keyof TObject>(
   first: TObject,
   second: TObject,
 ): Iterable<TKey> {

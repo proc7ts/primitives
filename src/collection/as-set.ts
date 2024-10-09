@@ -14,6 +14,6 @@ export function asSet<TElement>(
   return /*#__INLINE__*/ isIterable(elements)
     ? new Set(elements)
     : elements == null
-    ? new Set()
-    : new Set<TElement>().add(elements);
+      ? new Set()
+      : new Set<TElement>().add(elements);
 }

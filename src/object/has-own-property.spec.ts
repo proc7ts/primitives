@@ -18,12 +18,10 @@ describe('hasOwnProperty', () => {
   });
   it('returns `false` for the method defined in prototype', () => {
     class Base {
-
       a(): string {
         return 'test';
       }
-
-}
+    }
 
     expect(hasOwnProperty(new Base(), 'a')).toBe(false);
     expect(hasOwnProperty(Base.prototype, 'a')).toBe(true);

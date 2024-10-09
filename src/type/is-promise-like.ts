@@ -13,7 +13,7 @@ export function isPromiseLike<TResolved, TOther>(
   value: PromiseLike<TResolved> | TOther,
 ): value is PromiseLike<TResolved> {
   return (
-    /*#__INLINE__*/ mayHaveProperties(value)
-    && typeof (value as Partial<PromiseLike<TResolved>>).then === 'function'
+    /*#__INLINE__*/ mayHaveProperties(value) &&
+    typeof (value as Partial<PromiseLike<TResolved>>).then === 'function'
   );
 }

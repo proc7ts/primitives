@@ -11,8 +11,8 @@ export function isArrayLike<TElement, TOther = unknown>(
   value: ArrayLike<TElement> | TOther,
 ): value is ArrayLike<TElement> {
   return (
-    !!value
-    && typeof value === 'object'
-    && typeof (value as Partial<ArrayLike<TElement>>).length === 'number'
+    !!value &&
+    typeof value === 'object' &&
+    typeof (value as Partial<ArrayLike<TElement>>).length === 'number'
   );
 }

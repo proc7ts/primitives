@@ -33,8 +33,8 @@ export function asArray<TElement>(
   return /*#__INLINE__*/ isArray(value)
     ? value
     : value == null
-    ? []
-    : isIterable(value)
-    ? [...value]
-    : [value];
+      ? []
+      : isIterable(value)
+        ? [...value]
+        : [value];
 }
